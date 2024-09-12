@@ -1,16 +1,33 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 
+const name = "Juri";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout 
+  title="Juri Lorenz Portfolio Site" 
+  seoTitle="Juri Lorenz, App Developer Portfolio" 
+  seoDesc="Innovative App Developer Specializing in Astro, React and Mobile Solutions" 
+  >
+
+  <div class="w-8/12 md:w-6/12 mx-auto">
+    <h1 class="text-5xl md:text-6xl text-center">
+      Hey 👋​, I am Juri Lorenz
+    </h1>
+    <div id="typed-strings">
+      <p>I am a <strong>App Developer</strong></p>
+      <p>I <em>work</em> with Astro, React and Mobile Solutions</p>
+    </div>
+
+    <div class="text-center mt-6"><span id="typed"></span></div>
+    </div>
+</MainLayout>
+
+<script>
+  import Typed from "typed.js"
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 50,
+    loop: true,
+  });
+</script>
