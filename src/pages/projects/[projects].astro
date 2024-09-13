@@ -9,29 +9,29 @@ export async function getStaticPaths() {
       props: {
         name: "1",
         desc: "some description",
+      },
     },
-  },
-  { 
+    { 
       params: { projects: "2" }, 
       props: {
         name: "2",
         desc: "some description",
+      },
     },
-  },
-  { 
+    { 
       params: { projects: "3" }, 
       props: {
         name: "3",
         desc: "some description",
+      },
     },
-  },
-  { 
+    { 
       params: { projects: "4" }, 
       props: {
         name: "4",
         desc: "some description",
+      },
     },
-  },
   ];
 }
 
@@ -39,19 +39,17 @@ const { projects } = Astro.params;
 const { name, desc } = Astro.props;
 ---
 
-
 <MainLayout>
   <section class="mx-auto w-3/6">
     <img 
-      src=`/images/${projects}.png`  
+      src={`/images/${projects}.png`}  
       width="600" 
       height="600" 
-      class="rounded"
+      class="rounded shadow-md drop-shadow-[0px_35px_35px_rgba(135,206,250,0.6)]"
+      alt={`Project ${name}`}
     />
     <h1 class="font-bold mt-4">Project {name}</h1>
     <p>{desc}</p>
     <section></section>
   </section>
-
-
 </MainLayout>
