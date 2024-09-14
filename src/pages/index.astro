@@ -1,33 +1,45 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
-const name = "Juri";
 ---
 
 <MainLayout 
   title="Juri Lorenz Portfolio Site" 
   seoTitle="Juri Lorenz, App Developer Portfolio" 
-  seoDesc="Innovative App Developer Specializing in Astro, React and Mobile Solutions" 
+  seoDesc="Innovative App Developer Specializing in Astro, React and Mobile Solutions"
   >
 
-  <div class="w-8/12 md:w-6/12 mx-auto">
-    <h1 class="text-5xl md:text-6xl text-center shadow-md drop-shadow-[0px_35px_35px_rgba(135,206,250,0.8)]">
-      Hey 👋​, I am Juri Lorenz
+  <!-- Background with gradient -->
+  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center">
+    
+    <!-- Title -->
+    <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">
+      The Web Developer You Need for Modern Apps
     </h1>
-    <div id="typed-strings">
-      <p>I am a <strong>App Developer</strong></p>
-      <p>I <em>work</em> with Astro, React and Mobile Solutions</p>
-    </div>
 
-    <div class="text-center mt-6"><span id="typed"></span></div>
+    <!-- Subtitle -->
+    <p class="text-lg md:text-2xl mt-4 text-gray-300">
+      Bringing innovative ideas to life with React, Astro and modern web technologies.
+    </p>
+
+    <!-- Buttons Section -->
+    <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center">
+      
+      <!-- Primary Button (like Get Started) -->
+      <a href="/about" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
+        Learn My Story
+      </a>
+
+      <!-- Secondary Button (like npm command button) -->
+      <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all">
+        Explore My Work
+      </a>
     </div>
+  </div>
+
 </MainLayout>
 
-<script>
-  import Typed from "typed.js"
-  var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    typeSpeed: 50,
-    loop: true,
-  });
-</script>
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style>

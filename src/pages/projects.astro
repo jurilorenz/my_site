@@ -3,17 +3,69 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout 
-  title="Juri Lorenz's Project" 
-  seoTitle="Projects with React, Astro" 
-  seoDesc="Innovative Projects in Astro, React and Mobile Solutions"
+  title="Juri Lorenz's Projects" 
+  seoTitle="Projects in Web, iOS, and Startup" 
+  seoDesc="Innovative projects covering Web Development, iOS Development, and Startups"
 >
-  <div class="w-8/12 lg:w6/12 mx-auto">
-    <h1 class="text-5xl my-2">Projects</h1>
-    <div class="grid md:grid-cols-2 gap-2 shadow-md drop-shadow-[0px_35px_35px_rgba(135,206,250,0.6)]">
-      <a href="/projects/1"><img class="rounded" src="/images/1.png" width="300px" height="300px" alt="Project 1"/></a>
-      <a href="/projects/2"><img class="rounded" src="/images/2.png" width="300px" height="300px" alt="Project 2"/></a>
-      <a href="/projects/3"><img class="rounded" src="/images/3.png" width="300px" height="300px" alt="Project 3"/></a>
-      <a href="/projects/4"><img class="rounded" src="/images/4.png" width="300px" height="300px" alt="Project 4"/></a>
-    </div>
+
+  <!-- Gradient Background -->
+  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white">
+
+    <!-- Title -->
+    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg my-8">
+      My Projects
+    </h1>
+
+    <!-- Section 1: Web Development -->
+    <section class="mb-12">
+      <h2 class="text-center text-3xl md:text-4xl font-bold drop-shadow-lg mb-6">Crafting the Web</h2>
+      <div class="grid md:grid-cols-2 gap-4 w-10/12 mx-auto">
+        <!-- Project 1 -->
+        <a href="/projects/1" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
+          <img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/1.png" alt="Astro Gallery"/>
+          <h3 class="font-bold mt-4 text-xl">Astro Gallery</h3>
+          <p class="text-gray-400">A beautiful, dynamic gallery powered by Astro.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 2: iOS Development -->
+    <section class="mb-12">
+      <h2 class="text-center text-3xl md:text-4xl font-bold drop-shadow-lg mb-6">The iOS Experience</h2>
+      <div class="grid md:grid-cols-2 gap-4 w-10/12 mx-auto">
+        <!-- Project 2 (Moved to iOS) -->
+        <a href="/projects/2" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
+          <img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/2.png" alt="React Portfolio"/>
+          <h3 class="font-bold mt-4 text-xl">React Portfolio</h3>
+          <p class="text-gray-400">A modern portfolio built with React and Next.js.</p>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="/projects/3" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
+<img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/3.png" alt="Mobile App"/>          <h3 class="font-bold mt-4 text-xl">Mobile App</h3>
+          <p class="text-gray-400">A sleek mobile app developed for iOS and Android.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 3: My Startup -->
+    <section class="mb-12">
+      <h2 class="text-center text-3xl md:text-4xl font-bold drop-shadow-lg mb-6">Innovative Ventures</h2>
+      <div class="grid md:grid-cols-2 gap-4 w-10/12 mx-auto">
+        <!-- Project 4 -->
+        <a href="/projects/4" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
+          <img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/4.png" alt="Firebase Integration"/>
+          <h3 class="font-bold mt-4 text-xl">Firebase Integration</h3>
+          <p class="text-gray-400">A Firebase-powered real-time data solution.</p>
+        </a>
+      </div>
+    </section>
+
   </div>
 </MainLayout>
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style>

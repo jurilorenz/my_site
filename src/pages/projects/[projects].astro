@@ -2,34 +2,33 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
-  
   return [
     { 
       params: { projects: "1" }, 
       props: {
-        name: "1",
-        desc: "some description",
+        name: "Astro Gallery",
+        desc: "A beautiful, dynamic gallery powered by Astro. Showcasing responsive design and modern UI techniques.",
       },
     },
     { 
       params: { projects: "2" }, 
       props: {
-        name: "2",
-        desc: "some description",
+        name: "React Portfolio",
+        desc: "A modern portfolio built with React and Next.js, focusing on performance and a seamless user experience.",
       },
     },
     { 
       params: { projects: "3" }, 
       props: {
-        name: "3",
-        desc: "some description",
+        name: "Mobile App",
+        desc: "A sleek mobile app developed for iOS and Android platforms, using cutting-edge mobile development practices.",
       },
     },
     { 
       params: { projects: "4" }, 
       props: {
-        name: "4",
-        desc: "some description",
+        name: "Firebase Integration",
+        desc: "A Firebase-powered real-time data solution for high-performance, scalable applications.",
       },
     },
   ];
@@ -48,8 +47,12 @@ const { name, desc } = Astro.props;
       class="rounded shadow-md drop-shadow-[0px_35px_35px_rgba(135,206,250,0.6)]"
       alt={`Project ${name}`}
     />
-    <h1 class="font-bold mt-4">Project {name}</h1>
-    <p>{desc}</p>
-    <section></section>
+    <h1 class="font-bold mt-4 text-4xl">Project {name}</h1>
+    <p class="mt-2 text-gray-600 text-lg">{desc}</p>
+    <a href="/projects">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded mt-4">
+        Back to Projects
+      </button>
+    </a>
   </section>
 </MainLayout>
