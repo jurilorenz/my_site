@@ -1,19 +1,40 @@
 ---
 import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import { Icon } from 'astro-icon/components';
 ---
 
-<header class="lg:flex p-5 gap-5">
+<header class="bg-gradient-to-r from-[#090a1a] to-[#290065] text-white py-4 px-6 shadow-md">
   <Astronav>
-    <div class="flex w-full justify-between">
-      <a>JURI LORENZ</a>
-      <div class="block lg:hidden"><MenuIcon class="w-4 h-4 text-white"/></div>
+    <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
+      <!-- Logo (left aligned) -->
+      <a class="text-2xl font-bold tracking-wider text-white">maxWapp</a>
+      
+      <!-- Hamburger Icon for mobile -->
+      <div class="block lg:hidden">
+        <MenuIcon class="w-6 h-6 text-white"/>
+      </div>
+
+      <!-- Menu Items (centered for large screens) -->
+      <MenuItems class="hidden lg:flex space-x-8 text-base font-light">
+        <ul class="flex flex-col lg:flex-row gap-6">
+          <li><a href="/" class="hover:text-gray-400 transition">Home</a></li>
+          <li><a href="/projects" class="hover:text-gray-400 transition">Projects</a></li>
+          <li><a href="/about" class="hover:text-gray-400 transition">About</a></li>
+          <li><a href="/contact" class="hover:text-gray-400 transition">Contact</a></li>
+        </ul>
+      </MenuItems>
+
+      <!-- Social Icons (right aligned) -->
+      <div class="hidden lg:flex items-center space-x-4">
+    <!-- GitHub Icon -->
+    <a href="https://github.com/jurilorenz" class="ml-5">
+      <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-400" />
+    </a>
+    <!-- LinkedIn Icon -->
+    <a href="https://www.linkedin.com/in/juri-lorenz" class="ml-5">
+      <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-400" />
+    </a>
+      </div>
     </div>
-    <MenuItems class="hidden lg:flex">
-    <ul class="flex flex-col lg:flex-row gap-5">
-      <li><a href="/">Home</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
-  </MenuItems>
   </Astronav>
 </header>

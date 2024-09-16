@@ -1,0 +1,90 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout 
+  title="Contact Juri Lorenz" 
+  seoTitle="Contact Juri Lorenz, App Developer"
+  seoDesc="Get in touch with Juri Lorenz for collaborations, inquiries, or project ideas."
+>
+  <!-- Gradient Background -->
+  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex flex-col items-center justify-center">
+    
+    <!-- Title -->
+    <h1 class="pb-4 text-4xl md:text-5xl font-bold drop-shadow-lg">
+      Get in Touch
+    </h1>
+
+    <!-- Form Section -->
+    <div class="w-10/12 md:w-8/12 lg:w-6/12 mx-auto mt-8">
+      <form class="space-y-4">
+        <!-- Name and Email Fields -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Name" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full" />
+          <input type="email" placeholder="E-Mail" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full" />
+        </div>
+
+        <!-- Message Field -->
+        <textarea placeholder="Message" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32"></textarea>
+
+        <!-- Custom Checkbox and Label with Checkmark -->
+        <div class="flex items-start space-x-4">
+          <input type="checkbox" id="privacy-policy" class="custom-checkbox mt-1 w-5 h-5 appearance-none bg-transparent border-2 border-gray-300 rounded focus:ring-0 checked:bg-[#6d87d1] checked:border-[#6d87d1]">
+          <label for="privacy-policy" class="text-gray-300">I accept the <a href="/privacy" class="underline">Privacy Policy</a></label>
+        </div>
+
+        <button type="submit" class="bg-[#6d87d1] text-white font-bold py-3 px-8 rounded-md hover:bg-[#8faef2] transition-all">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Contact Information Section styled as a project card -->
+    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-12">
+      <div class="bg-[#0b0e19] p-6 rounded-lg shadow-sm border border-gray-700 transition">
+        <h2 class="text-3xl font-bold text-center">Contact Information</h2>
+        <p class="mt-4"><strong>Phone:</strong> +49 1 777 59 48 39 <br/> (Mon – Fri from 8:00 AM to 6:00 PM.)</p>
+        <p class="mt-4"><strong>Email:</strong> <a href="mailto:yuriylorenz@gmail.com" class="underline">yuriylorenz@gmail.com</a></p>
+        <p class="mt-4"><strong>Office:</strong> <br/> Constanze-Hallgarten Str. 40, 81379 Munich</p>
+        
+        <div class="mt-4 flex justify-between">
+          <a href="/imprint" class="underline text-gray-400">Imprint</a>
+          <a href="/privacy" class="underline text-gray-400">Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .custom-checkbox {
+    width: 1.25rem;  /* Same width and height */
+    height: 1.25rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .custom-checkbox:checked::before {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.75rem;
+  }
+
+  /* Add a subtle shadow to the contact info section */
+  .shadow-sm {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Soft, small shadow */
+  }
+
+  .hover\:shadow-md:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly stronger on hover */
+  }
+</style>

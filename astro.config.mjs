@@ -1,8 +1,15 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from '@astrojs/tailwind';
+import icon from 'astro-icon';
 
-// https://astro.build/config
+// Astro Configuration
 export default defineConfig({
-  integrations: [tailwind()]
+  integrations: [
+    tailwind(), // Keep Tailwind for your styles
+    icon({
+      include: {
+        fa: ["github", "linkedin"], // Only import GitHub and LinkedIn icons from FontAwesome
+      },
+    }),
+  ],
 });
