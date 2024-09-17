@@ -11,45 +11,53 @@ import MainLayout from "../layouts/MainLayout.astro";
   <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex flex-col items-center justify-center">
     
     <!-- Title -->
-    <h1 class="pb-4 text-4xl md:text-5xl font-bold drop-shadow-lg">
-      Get in Touch
+    <h1 class="pb-4 text-4xl md:text-5xl font-bold drop-shadow-lg mt-8 md:mt-4">
+      Let's Collaborate
     </h1>
+
+    <!-- Subtitle -->
+    <p class="text-lg md:text-2xl mt-4 text-gray-300 text-center">
+      Got a project in mind? Feel free to reach out!
+    </p>
 
     <!-- Form Section -->
     <div class="w-10/12 md:w-8/12 lg:w-6/12 mx-auto mt-8">
-      <form class="space-y-4">
+      <form class="space-y-6">
         <!-- Name and Email Fields -->
         <div class="grid md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Name" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full" />
-          <input type="email" placeholder="E-Mail" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full" />
+          <input type="text" placeholder="Your Name" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
+          <input type="email" placeholder="Your Email" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
         </div>
 
         <!-- Message Field -->
-        <textarea placeholder="Message" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32"></textarea>
+        <textarea placeholder="Your Message" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32 focus:outline-none focus:ring-2 focus:ring-[#6d87d1]"></textarea>
 
         <!-- Custom Checkbox and Label with Checkmark -->
         <div class="flex items-start space-x-4">
           <input type="checkbox" id="privacy-policy" class="custom-checkbox mt-1 w-5 h-5 appearance-none bg-transparent border-2 border-gray-300 rounded focus:ring-0 checked:bg-[#6d87d1] checked:border-[#6d87d1]">
-          <label for="privacy-policy" class="text-gray-300">I accept the <a href="/privacy" class="underline">Privacy Policy</a></label>
+          <label for="privacy-policy" class="text-gray-300">I accept the <a href="/privacy" class="underline hover:text-[#6d87d1]">Privacy Policy</a></label>
         </div>
 
-        <button type="submit" class="bg-[#6d87d1] text-white font-bold py-3 px-8 rounded-md hover:bg-[#8faef2] transition-all">
-          Submit
-        </button>
+        <!-- Submit Button with the same style as 'Explore My Work' button -->
+        <div class="text-center mt-6">
+          <button type="submit" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all">
+            Send Message
+          </button>
+        </div>
       </form>
     </div>
 
     <!-- Contact Information Section styled as a project card -->
-    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-12">
-      <div class="bg-[#0b0e19] p-6 rounded-lg shadow-sm border border-gray-700 transition">
+    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-12 mb-8">
+      <div class="bg-[#0b0e19] p-6 rounded-lg shadow-sm border border-gray-700 transition hover:shadow-md">
         <h2 class="text-3xl font-bold text-center">Contact Information</h2>
-        <p class="mt-4"><strong>Phone:</strong> +49 1 777 59 48 39 <br/> (Mon – Fri from 8:00 AM to 6:00 PM.)</p>
-        <p class="mt-4"><strong>Email:</strong> <a href="mailto:yuriylorenz@gmail.com" class="underline">yuriylorenz@gmail.com</a></p>
-        <p class="mt-4"><strong>Office:</strong> <br/> Constanze-Hallgarten Str. 40, 81379 Munich</p>
+        <p class="mt-4 text-gray-300"><strong>Phone:</strong> +49 1 777 59 48 39 <br/> (Mon – Fri from 8:00 AM to 6:00 PM.)</p>
+        <p class="mt-4 text-gray-300"><strong>Email:</strong> <a href="mailto:yuriylorenz@gmail.com" class="underline hover:text-[#6d87d1]">yuriylorenz@gmail.com</a></p>
+        <p class="mt-4 text-gray-300"><strong>Office:</strong> <br/> Constanze-Hallgarten Str. 40, 81379 Munich</p>
         
         <div class="mt-4 flex justify-between">
-          <a href="/imprint" class="underline text-gray-400">Imprint</a>
-          <a href="/privacy" class="underline text-gray-400">Privacy Policy</a>
+          <a href="/imprint" class="underline text-gray-400 hover:text-[#6d87d1]">Imprint</a>
+          <a href="/privacy" class="underline text-gray-400 hover:text-[#6d87d1]">Privacy Policy</a>
         </div>
       </div>
     </section>
@@ -86,5 +94,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   .hover\:shadow-md:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly stronger on hover */
+  }
+
+  /* Add space before the title and between the contact card and footer on mobile */
+  @media (max-width: 768px) {
+    h1 {
+      margin-top: 2rem;
+    }
+    section.mb-12 {
+      margin-bottom: 4rem;
+    }
   }
 </style>

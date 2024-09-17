@@ -1,0 +1,53 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout 
+  title="Imprint - Juri Lorenz" 
+  seoTitle="Imprint" 
+  seoDesc="Imprint for Juri Lorenz"
+>
+  <!-- Gradient Background -->
+  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex flex-col items-center justify-center">
+    
+    <!-- Title -->
+    <h1 class="pb-4 text-4xl md:text-5xl font-bold drop-shadow-lg mt-[-20px] md:mt-[-40px]">
+      Imprint
+  </h1>
+
+    <!-- Content Section -->
+    <div class="w-10/12 md:w-8/12 lg:w-6/12 mx-auto mt-8 text-gray-300">
+      <h3 class="text-2xl font-bold mt-4">Information in accordance with § 5 TMG</h3>
+      <p class="mt-4">Juri Lorenz</p>
+      <p>Constanze-Hallgarten Str. 40</p>
+      <p>81379 Munich</p>
+      <p class="mt-4">Email: <a href="mailto:yuriylorenz@gmail.com" class="underline hover:text-[#6d87d1]">yuriylorenz@gmail.com</a></p>
+      <p class="mt-4">Source: <a href="https://www.e-recht24.de" class="underline hover:text-[#6d87d1]">https://www.e-recht24.de</a></p>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Add a subtle shadow to the contact info section */
+  .shadow-sm {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Soft, small shadow */
+  }
+
+  .hover\:shadow-md:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly stronger on hover */
+  }
+
+  /* Add space before the title and between the content card and footer on mobile */
+  @media (max-width: 768px) {
+    h1 {
+      margin-top: 0; 
+   }
+    section.mb-12 {
+      margin-bottom: 4rem;
+    }
+  }
+</style>
