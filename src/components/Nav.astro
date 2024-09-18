@@ -6,8 +6,12 @@ import { Icon } from 'astro-icon/components';
 <header class="bg-gradient-to-r from-[#090a1a] to-[#290065] text-white py-4 px-6 shadow-md">
   <Astronav>
     <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
-      <!-- Logo (left aligned) -->
-      <a class="text-2xl font-bold tracking-wider text-white">maxWapp</a>
+      <!-- Logo and Site Name (left aligned) -->
+      <div class="flex items-center space-x-4">
+        <!-- SVG Logo -->
+        <img src="/images/logo.svg" alt="Logo" class="w-8 h-8" />
+        <!-- Site Name -->
+        <a class="text-2xl font-montserrat font-bold tracking-wider text-white">maxWapp</a>      </div>
       
       <!-- Hamburger Icon for mobile -->
       <div class="block lg:hidden">
@@ -26,14 +30,14 @@ import { Icon } from 'astro-icon/components';
 
       <!-- Social Icons (right aligned) -->
       <div class="hidden lg:flex items-center space-x-4">
-    <!-- GitHub Icon -->
-    <a href="https://github.com/jurilorenz" class="ml-5">
-      <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-400" />
-    </a>
-    <!-- LinkedIn Icon -->
-    <a href="https://www.linkedin.com/in/juri-lorenz" class="ml-5">
-      <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-400" />
-    </a>
+        <!-- GitHub Icon -->
+        <a href="https://github.com/jurilorenz" class="ml-5">
+          <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-400" />
+        </a>
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/juri-lorenz" class="ml-5">
+          <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-400" />
+        </a>
       </div>
     </div>
   </Astronav>

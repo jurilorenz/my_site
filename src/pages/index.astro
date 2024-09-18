@@ -12,12 +12,12 @@ import MainLayout from "../layouts/MainLayout.astro";
   <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center">
   
     <!-- Title -->
-    <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">
+    <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg mx-4 md:mx-16">
       The Developer You Need for Modern Apps
     </h1>
 
     <!-- Subtitle with Typing Animation -->
-    <div class="text-lg md:text-2xl mt-4 text-gray-300">
+    <div class="text-lg md:text-2xl mt-4 text-gray-300 mx-6 md:mx-16">
       <div id="typed-strings">
         <p>Building modern web solutions with Astro and React</p>
         <p>Innovating through mobile and web technologies</p>
@@ -25,26 +25,29 @@ import MainLayout from "../layouts/MainLayout.astro";
       <span id="typed"></span>
     </div>
 
-    <!-- Buttons Section -->
-    <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center">
+    <!-- Image and Buttons Section -->
+    <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
       
-      <!-- Primary Button (like Get Started) -->
-      <a href="/projects" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
-        Explore My Work
-      </a>
+      <!-- Large Image (hidden on mobile) -->
+      <div class="order-2 md:order-1 hidden md:block">
+        <img src="/images/home-page.png" 
+        class="w-40 md:w-96 h-auto object-cover shadow-md drop-shadow-[10px_10px_35px_rgba(0,0,0,0.5)]" 
+        alt="Juri Lorenz" />
+      </div>
+      
+      <!-- Buttons -->
+      <div class="order-1 md:order-2 flex flex-col md:flex-row gap-6">
+        <!-- Primary Button (like Get Started) -->
+        <a href="/projects" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
+          My Projects
+        </a>
 
-      <!-- Secondary Button (like npm command button) -->
-      <a href="/contact" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all">
-        Get In Touch
-      </a>
+        <!-- Secondary Button (like npm command button) -->
+        <a href="/contact" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all">
+          Get In Touch
+        </a>
+      </div>
     </div>
-
-        <!-- Large Image Section Above Title -->
-        <div class="my-8 flex justify-center">
-          <img src="/images/home-page.png" 
-          class="w-40 md:w-72 h-auto object-cover shadow-md drop-shadow-[10px_10px_35px_rgba(0,0,0,0.5)]" 
-          alt="Juri Lorenz" />
-        </div>
         
   </div>
 
@@ -63,5 +66,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 <style>
   body {
     font-family: 'Inter', sans-serif;
+  }
+
+  /* Mobile-only adjustments */
+  @media (max-width: 768px) {
+    .buttons-container {
+      margin-top: 2rem; /* Добавляем отступ сверху для мобильных устройств */
+    }
   }
 </style>
