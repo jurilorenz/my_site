@@ -12,18 +12,19 @@ import MainLayout from "../layouts/MainLayout.astro";
   <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex items-center justify-center md:justify-end relative overflow-hidden">
     
     <!-- Image on the left (full-screen) -->
-    <div class="absolute inset-0 w-full md:w-1/2 h-full shadow-md drop-shadow-[0px_-35px_35px_rgba(0,0,0,0.6)]">
-      <img src="/images/home-page.png" 
-           class="w-full h-full object-cover opacity-60 md:opacity-100" 
-           alt="Juri Lorenz" />
-    </div>
+<!-- Image on the left (full-screen) -->
+<div class="absolute inset-0 w-full md:w-1/2 h-full shadow-md drop-shadow-[0px_-35px_35px_rgba(0,0,0,0.6)] md:pt-[14vh] transform translate-y-[-5%] right-0 md:translate-x-0 md:translate-y-0">
+  <img src="/images/home-page.png" 
+       class="w-full h-full object-cover object-top opacity-60 md:opacity-100" 
+       alt="Juri Lorenz" />
+</div>
 
     <!-- Right-side content -->
     <div class="relative w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-16 z-10 text-left">
       
       <!-- Title -->
-      <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">
-        Create Fast and Efficient Websites and Mobile Apps
+      <h1 class="text-4xl md:text-6xl max-w-2xl font-bold drop-shadow-lg">
+        Create Fast and Efficient Websites
       </h1>
 
       <!-- Subtitle with Typing Animation -->
@@ -79,10 +80,4 @@ import MainLayout from "../layouts/MainLayout.astro";
     font-family: 'Inter', sans-serif;
   }
 
-  /* Mobile-only adjustments */
-  @media (max-width: 768px) {
-    .buttons-container {
-      margin-top: 2rem; /* Добавляем отступ сверху для мобильных устройств */
-    }
-  }
 </style>
