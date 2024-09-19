@@ -9,52 +9,63 @@ import MainLayout from "../layouts/MainLayout.astro";
   >
 
   <!-- Background with gradient -->
-  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center">
-  
-    <!-- Title -->
-    <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg mx-4 md:mx-16">
-      The Developer You Need for Modern Apps
-    </h1>
-
-    <!-- Subtitle with Typing Animation -->
-    <div class="text-lg md:text-2xl mt-4 text-gray-300 mx-6 md:mx-16">
-      <div id="typed-strings">
-        <p>Building modern web solutions with Astro and React</p>
-        <p>Innovating through mobile and web technologies</p>
-      </div>
-      <span id="typed"></span>
+  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex items-center justify-center md:justify-end relative overflow-hidden">
+    
+    <!-- Image on the left (full-screen) -->
+    <div class="absolute inset-0 w-full md:w-1/2 h-full shadow-md drop-shadow-[0px_-35px_35px_rgba(0,0,0,0.6)]">
+      <img src="/images/home-page.png" 
+           class="w-full h-full object-cover opacity-60 md:opacity-100" 
+           alt="Juri Lorenz" />
     </div>
 
-    <!-- Image and Buttons Section -->
-    <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
+    <!-- Right-side content -->
+    <div class="relative w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-16 z-10 text-left">
       
-      <!-- Large Image (hidden on mobile) -->
-      <div class="order-2 md:order-1 hidden md:block">
-        <img src="/images/home-page.png" 
-        class="w-40 md:w-96 h-auto object-cover shadow-md drop-shadow-[10px_10px_35px_rgba(0,0,0,0.5)]" 
-        alt="Juri Lorenz" />
+      <!-- Title -->
+      <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">
+        Create Fast and Efficient Websites and Mobile Apps
+      </h1>
+
+      <!-- Subtitle with Typing Animation -->
+      <div class="text-lg md:text-2xl mt-6 md:mt-12 text-gray-300">
+        <div id="typed-strings">
+          <p>With over 5 years of experience</p>
+          <p>Building fast and effective websites</p>
+          <p>Integrating AI and modern technologies</p>
+          <p>Focused on conversions and sales</p>
+        </div>
+        <span id="typed"></span>
       </div>
       
-      <!-- Buttons -->
-      <div class="order-1 md:order-2 flex flex-col md:flex-row gap-6">
-        <!-- Primary Button (like Get Started) -->
+      <!-- List of advantages -->
+      <ul class="text-lg md:text-xl mt-6 md:mt-12 text-gray-100 space-y-2">
+        <li><i class="fas fa-check text-white mr-4"></i> Fast website and app development</li>
+        <li><i class="fas fa-check text-white mr-4"></i> Conversion-focused products</li>
+        <li><i class="fas fa-check text-white mr-4"></i> Over 5 years of experience</li>
+        <li><i class="fas fa-check text-white mr-4"></i> Advanced technologies and AI integration</li>
+      </ul>
+
+      <!-- Buttons at the bottom-right -->
+      <div class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-end">
+        <!-- Primary Button -->
         <a href="/projects" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
-          My Projects
+          Discover Projects
         </a>
 
-        <!-- Secondary Button (like npm command button) -->
+        <!-- Secondary Button -->
         <a href="/contact" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all">
-          Get In Touch
+          Contact Me
         </a>
       </div>
+
     </div>
-        
+
   </div>
 
 </MainLayout>
 
 <script>
-  import Typed from "typed.js"
+  import Typed from "typed.js";
   var typed = new Typed('#typed', {
     stringsElement: '#typed-strings',
     typeSpeed: 50,
