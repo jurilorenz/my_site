@@ -1,46 +1,122 @@
 ---
-import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
 import { Icon } from 'astro-icon/components';
 ---
 
 <header class="bg-gradient-to-r from-[#090a1a] to-[#290065] text-white py-4 px-6 shadow-md">
-  <Astronav>
-    <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
-      <!-- Logo and Site Name (left aligned) -->
-      <div class="flex items-center space-x-4">
-        <!-- SVG Logo -->
-        <img src="/images/logo.svg" alt="Logo" class="w-8 h-8" />
-        <!-- Site Name -->
-        <a class="text-2xl font-montserrat font-bold tracking-wider text-white">maxWapp</a>
-      </div>
+  <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
+    <!-- Logo and Site Name (left aligned) -->
+    <div class="flex items-center space-x-4">
+      <!-- SVG Logo -->
+      <img src="/images/logo.svg" alt="Logo" class="w-8 h-8 logo-stable" />
+      <!-- Site Name -->
+      <a class="text-2xl font-montserrat font-bold tracking-wider text-white">maxWapp</a>
+    </div>
+
+    <!-- Hamburger Icon for mobile -->
+    <button id="open-menu" class="block lg:hidden focus:outline-none py-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
+        <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="3" y1="12" x2="21" y2="12" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="3" y1="18" x2="21" y2="18" stroke-linecap="round" stroke-linejoin="round"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Section -->
+  <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-[#090a1a] text-white z-50 opacity-0 invisible transition-opacity duration-300 ease-in-out">
+        <div class="flex flex-col h-full justify-start py-2">
       
-      <!-- Hamburger Icon for mobile -->
-      <div class="block lg:hidden">
-        <MenuIcon class="w-6 h-6 text-white"/>
+      <!-- Top Section with Logo and Close Icon -->
+      <div class="flex justify-between items-center mb-2 px-6">
+        <!-- Logo and Site Name -->
+        <div class="flex items-center space-x-4">
+          <img src="/images/logo.svg" alt="Logo" class="w-10 h-10 logo-stable" />
+          <span class="text-2xl font-montserrat tracking-wider font-bold">maxWapp</span>
+        </div>
+        <!-- Close Button -->
+        <button id="close-menu" class="block lg:hidden focus:outline-none py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
+            <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="3" y1="12" x2="21" y2="12" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="3" y1="18" x2="21" y2="18" stroke-linecap="round" stroke-linejoin="round"></line>
+          </svg>
+        </button>
       </div>
 
-      <!-- Menu Items (centered for large screens) -->
-      <MenuItems class="hidden lg:flex space-x-8 text-base font-light">
-        <ul class="flex flex-col lg:flex-row gap-6">
-          <li><a href="/" class="hover:text-gray-400 transition">Home</a></li>
-          <li><a href="/projects" class="hover:text-gray-400 transition">Projects</a></li>
-          <li><a href="/about" class="hover:text-gray-400 transition">About</a></li>
-          <li><a href="/contact" class="hover:text-gray-400 transition">Contact</a></li>
+      <!-- Menu Items -->
+      <nav>
+        <ul class="text-lg font-light w-full">
+          <!-- First item with more padding (py-6 for taller height) -->
+          <li class="w-full border-t border-b border-gray-600"><a href="/" class="block py-6 px-6 hover:text-gray-400 transition">Home</a></li>
+          
+          <!-- All list items with the same increased padding -->
+          <li class="w-full border-b border-gray-600"><a href="/projects" class="block py-6 px-6 hover:text-gray-400 transition">Projects</a></li>
+          
+          <li class="w-full border-b border-gray-600"><a href="/about" class="block py-6 px-6 hover:text-gray-400 transition">About</a></li>
         </ul>
-      </MenuItems>
+      </nav>
 
-      <!-- Social Icons (right aligned) -->
-      <div class="hidden lg:flex items-center space-x-4">
-        <!-- GitHub Icon -->
-        <a href="https://github.com/jurilorenz" class="ml-5">
-          <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-400" />
-        </a>
-        <!-- LinkedIn Icon -->
-        <a href="https://www.linkedin.com/in/juri-lorenz" class="ml-5">
-          <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-400" />
-        </a>
+      <!-- Social Icons and Contact Me Button -->
+      <div class="mt-6 px-6">
+        <!-- Social Icons -->
+        <div class="flex space-x-4 mb-6">
+          <a href="https://github.com/jurilorenz" class="text-white">
+            <Icon name="fa:github" class="w-6 h-6 hover:text-gray-400" />
+          </a>
+          <a href="https://www.linkedin.com/in/juri-lorenz" class="text-white">
+            <Icon name="fa:linkedin" class="w-6 h-6 hover:text-gray-400" />
+          </a>
+        </div>
+
+        <!-- Contact Me Button -->
+        <div class="flex justify-center mt-8">
+          <a href="/contact" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all text-center w-full max-w-xs">
+            Contact Me
+          </a>
+        </div>
       </div>
     </div>
-  </Astronav>
+  </div>
+</header>
 
-  
+<script>
+  // Toggle mobile menu visibility
+  const openMenu = document.getElementById('open-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = document.getElementById('close-menu');
+  let menuOpen = false;
+
+  openMenu.addEventListener('click', () => {
+    if (!menuOpen) {
+      // Show mobile menu with opacity transition
+      mobileMenu.classList.remove('invisible');
+      mobileMenu.classList.add('opacity-100');
+      mobileMenu.classList.remove('opacity-0');
+    }
+    menuOpen = true;
+  });
+
+  closeMenu.addEventListener('click', () => {
+    if (menuOpen) {
+      // Hide mobile menu with opacity transition
+      mobileMenu.classList.add('opacity-0');
+      mobileMenu.classList.remove('opacity-100');
+      setTimeout(() => {
+        mobileMenu.classList.add('invisible');
+      }, 300); // Adjust this to match the duration of the transition
+    }
+    menuOpen = false;
+  });
+</script>
+
+<style>
+  .logo-stable {
+    width: 40px; /* Set a fixed width for the logo */
+    height: 40px; 
+  }
+
+  hr {
+    margin: 0;
+    border: 1px solid #4a4a4a; /* Dark gray for horizontal lines */
+  }
+</style>
