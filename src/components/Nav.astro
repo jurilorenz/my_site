@@ -20,20 +20,37 @@ import { Icon } from 'astro-icon/components';
         <line x1="3" y1="18" x2="21" y2="18" stroke-linecap="round" stroke-linejoin="round"></line>
       </svg>
     </button>
+
+<!-- Desktop Menu Items (centered for large screens) -->
+<nav id="desktop-menu" class="hidden lg:flex space-x-8 text-base font-light">
+  <ul class="flex flex-col lg:flex-row gap-16">
+    <li><a href="/" class="text-gray-300 hover:text-white transition">Home</a></li>
+    <li><a href="/projects" class="text-gray-300 hover:text-white transition">Projects</a></li>
+    <li><a href="/about" class="text-gray-300 hover:text-white transition">About</a></li>
+  </ul>
+</nav>
+
+    <!-- Social Icons (right aligned for large screens) -->
+    <div class="hidden lg:flex items-center space-x-6">
+      <a href="https://www.linkedin.com/in/juri-lorenz" class="ml-5">
+        <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-400" />
+      </a>
+      <a href="https://github.com/jurilorenz" class="ml-5">
+        <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-400" />
+      </a>
+    </div>
   </div>
 
   <!-- Mobile Menu Section -->
   <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-[#090a1a] text-white z-50 opacity-0 invisible transition-opacity duration-300 ease-in-out">
-        <div class="flex flex-col h-full justify-start py-2">
+    <div class="flex flex-col h-full justify-start py-2">
       
       <!-- Top Section with Logo and Close Icon -->
       <div class="flex justify-between items-center mb-2 px-6">
-        <!-- Logo and Site Name -->
         <div class="flex items-center space-x-4">
           <img src="/images/logo.svg" alt="Logo" class="w-10 h-10 logo-stable" />
           <span class="text-2xl font-montserrat tracking-wider font-bold">maxWapp</span>
         </div>
-        <!-- Close Button -->
         <button id="close-menu" class="block lg:hidden focus:outline-none py-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
             <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round" stroke-linejoin="round"></line>
@@ -43,23 +60,18 @@ import { Icon } from 'astro-icon/components';
         </button>
       </div>
 
-      <!-- Menu Items -->
+      <!-- Mobile Menu Items -->
       <nav>
         <ul class="text-lg font-light w-full">
-          <!-- First item with more padding (py-6 for taller height) -->
           <li class="w-full border-t border-b border-gray-600"><a href="/" class="block py-6 px-6 hover:text-gray-400 transition">Home</a></li>
-          
-          <!-- All list items with the same increased padding -->
           <li class="w-full border-b border-gray-600"><a href="/projects" class="block py-6 px-6 hover:text-gray-400 transition">Projects</a></li>
-          
           <li class="w-full border-b border-gray-600"><a href="/about" class="block py-6 px-6 hover:text-gray-400 transition">About</a></li>
         </ul>
       </nav>
 
       <!-- Social Icons and Contact Me Button -->
       <div class="mt-6 px-6">
-        <!-- Social Icons -->
-        <div class="flex space-x-4 mb-6">
+        <div class="flex space-x-6 mb-6">
           <a href="https://github.com/jurilorenz" class="text-white">
             <Icon name="fa:github" class="w-6 h-6 hover:text-gray-400" />
           </a>
@@ -68,7 +80,6 @@ import { Icon } from 'astro-icon/components';
           </a>
         </div>
 
-        <!-- Contact Me Button -->
         <div class="flex justify-center mt-8">
           <a href="/contact" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all text-center w-full max-w-xs">
             Contact Me
@@ -88,7 +99,6 @@ import { Icon } from 'astro-icon/components';
 
   openMenu.addEventListener('click', () => {
     if (!menuOpen) {
-      // Show mobile menu with opacity transition
       mobileMenu.classList.remove('invisible');
       mobileMenu.classList.add('opacity-100');
       mobileMenu.classList.remove('opacity-0');
@@ -98,12 +108,11 @@ import { Icon } from 'astro-icon/components';
 
   closeMenu.addEventListener('click', () => {
     if (menuOpen) {
-      // Hide mobile menu with opacity transition
       mobileMenu.classList.add('opacity-0');
       mobileMenu.classList.remove('opacity-100');
       setTimeout(() => {
         mobileMenu.classList.add('invisible');
-      }, 300); // Adjust this to match the duration of the transition
+      }, 300);
     }
     menuOpen = false;
   });
@@ -113,10 +122,5 @@ import { Icon } from 'astro-icon/components';
   .logo-stable {
     width: 40px; /* Set a fixed width for the logo */
     height: 40px; 
-  }
-
-  hr {
-    margin: 0;
-    border: 1px solid #4a4a4a; /* Dark gray for horizontal lines */
   }
 </style>
