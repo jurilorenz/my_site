@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import RoomContent from "../../components/RoomContent.astro";
 import BattleContent from "../../components/BattleContent.astro";
+import ProfruketContent from "../../components/ProfruketContent.astro";
 
 export async function getStaticPaths() {
   return [
@@ -29,8 +30,8 @@ export async function getStaticPaths() {
     { 
       params: { projects: "4" }, 
       props: {
-        name: "Firebase Integration",
-        desc: "A Firebase-powered real-time data solution for high-performance, scalable applications.",
+        name: "ProFruket",
+        desc: "Crafting Beauty, Nurturing Nature",
       },
     },
   ];
@@ -50,7 +51,7 @@ const { name, desc } = Astro.props;
     </h1>
 
     <!-- Description -->
-    <p class="text-center text-lg md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+    <p class="text-center text-lg px-4 md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
       {desc}
     </p>
 
@@ -67,6 +68,7 @@ const { name, desc } = Astro.props;
     <section class="my-12 w-10/12 md:w-8/12 lg:w-7/12 mx-auto">
       {projects === '2' && <RoomContent />}
       {projects === '3' && <BattleContent />}
+      {projects === '4' && <ProfruketContent />}
     </section>
 
 
