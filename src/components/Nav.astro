@@ -6,10 +6,13 @@ import { Icon } from 'astro-icon/components';
   <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
     <!-- Logo and Site Name (left aligned) -->
     <div class="flex items-center space-x-4">
-      <!-- SVG Logo -->
-      <img src="/images/logo.svg" alt="Logo" class="w-8 h-8 logo-stable" />
-      <!-- Site Name -->
-      <a class="text-2xl font-montserrat font-bold tracking-wider text-white">maxWapp</a>
+      <!-- Clickable Logo and Site Name -->
+      <a href="/" class="flex items-center space-x-4">
+        <!-- SVG Logo -->
+        <img src="/images/logo.svg" alt="Logo" class="w-8 h-8 logo-stable" />
+        <!-- Site Name -->
+        <span class="text-2xl font-montserrat font-bold tracking-wider text-white">maxWapp</span>
+      </a>
     </div>
 
     <!-- Hamburger Icon for mobile -->
@@ -33,10 +36,10 @@ import { Icon } from 'astro-icon/components';
     <!-- Social Icons (right aligned for large screens) -->
     <div class="hidden lg:flex items-center space-x-6">
       <a href="https://www.linkedin.com/in/juri-lorenz" class="ml-5">
-        <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-400" />
+        <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-200" />
       </a>
       <a href="https://github.com/jurilorenz" class="ml-5">
-        <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-400" />
+        <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-200" />
       </a>
     </div>
   </div>
@@ -73,10 +76,10 @@ import { Icon } from 'astro-icon/components';
       <div class="mt-6 px-6">
         <div class="flex space-x-6 mb-6">
           <a href="https://github.com/jurilorenz" class="text-white">
-            <Icon name="fa:github" class="w-6 h-6 hover:text-gray-400" />
+            <Icon name="fa:github" class="w-6 h-6" />
           </a>
           <a href="https://www.linkedin.com/in/juri-lorenz" class="text-white">
-            <Icon name="fa:linkedin" class="w-6 h-6 hover:text-gray-400" />
+            <Icon name="fa:linkedin" class="w-6 h-6" />
           </a>
         </div>
 
