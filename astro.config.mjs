@@ -8,7 +8,7 @@ export default defineConfig({
     tailwind(), // Keep Tailwind for your styles
     icon({
       include: {
-        fa: ["github", "linkedin"], // Only import GitHub and LinkedIn icons from FontAwesome
+        fa: ["github", "linkedin"], 
       },
     }),
   ],

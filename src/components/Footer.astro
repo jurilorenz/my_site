@@ -2,12 +2,61 @@
 
 ---
 
-<footer class="text-center mt-auto py-4">
-  <small>Copyright  &copy; <span id="copyright"></span>  | All rights reserved</small>
+<footer class="bg-[#090a1a] text-white py-10 px-4 mt-auto">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    
+    <!-- Address Section (Left-Aligned on Desktop) -->
+    <div class="flex flex-col items-center md:items-start">
+      <h4 class="text-lg font-bold mb-2">maxWapp</h4>
+
+      <!-- Align icons vertically on mobile -->
+      <div class="flex flex-col space-y-4 md:space-y-2">
+        <!-- Email -->
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-envelope text-white w-6 h-6"></i>
+          <a href="mailto:yuriylorenz@gmail.com" class="hover:text-[#6d87d1] transition">
+            yuriylorenz@gmail.com
+          </a>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-phone text-white w-6 h-6"></i>
+          <a href="tel:+491777594839" class="hover:text-[#6d87d1] transition">
+            +49 1 777 59 48 39
+          </a>
+        </div>
+
+        <!-- Location -->
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-map-marker-alt text-white w-6 h-6"></i>
+          <a href="https://www.google.com/maps/place/Constanze-Hallgarten-Stra%C3%9Fe+40,+81379+M%C3%BCnchen/@48.0961762,11.5058474,17z/data=!3m1!4b1!4m6!3m5!1s0x479dd9aec05f4d43:0x3cdbed2e7e8aaf1f!8m2!3d48.0961726!4d11.5084223!16s%2Fg%2F11lrwckdl3?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-[#6d87d1] transition">
+            Constanze-Hallgarten Str. 40, <br> 81379 Munich
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imprint Section (Centered on Desktop) -->
+    <div class="flex flex-col items-center md:items-center">
+      <a href="/imprint" class="hover:text-[#6d87d1] transition">Imprint</a>
+    </div>
+
+    <!-- Privacy Section (Symmetric to the Address Section) -->
+    <div class="flex flex-col items-center md:items-end">
+      <a href="/privacy" class="hover:text-[#6d87d1] transition">Privacy</a>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <hr class="my-8 border-gray-600"/>
+
+  <!-- Links and Copyright in One Row -->
+  <div class="max-w-3xl mx-auto text-center ">
+    <small>&copy; <span id="copyright"></span> maxWapp</small>
+  </div>
 </footer>
 
 <script>
-  document.querySelector('#copyright').textContent = new Date()
-    .getFullYear()
-    .toString();
+  document.querySelector('#copyright').textContent = new Date().getFullYear().toString();
 </script>
