@@ -3,14 +3,15 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import RoomContent from "../../components/RoomContent.astro";
 import BattleContent from "../../components/BattleContent.astro";
 import ProfruketContent from "../../components/ProfruketContent.astro";
+import MaaArt from "../../components/MaaArt.astro";
 
 export async function getStaticPaths() {
   return [
     { 
       params: { projects: "1" }, 
       props: {
-        name: "Astro Gallery",
-        desc: "A beautiful, dynamic gallery powered by Astro. Showcasing responsive design and modern UI techniques.",
+        name: "MAA Art",
+        desc: "A beautiful, dynamic gallery powered by React.js. Showcasing responsive design and modern UI techniques.",
       },
     },
     { 
@@ -66,6 +67,7 @@ const { name, desc } = Astro.props;
 
     <!-- Dynamic Content for each project -->
     <section class="my-12 w-10/12 md:w-8/12 lg:w-7/12 mx-auto">
+      {projects === '1' && <MaaArt />}
       {projects === '2' && <RoomContent />}
       {projects === '3' && <BattleContent />}
       {projects === '4' && <ProfruketContent />}

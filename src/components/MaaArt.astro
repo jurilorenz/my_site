@@ -1,0 +1,134 @@
+---
+  // This is the MAA Art website project component
+---
+
+<section class="mt-12">
+  <h2 class="text-4xl font-bold text-white tracking-wider text-center">MAA Art Website</h2>
+  <h3 class="text-2xl mt-6 text-gray-300 tracking-wide text-center">Crafting a Digital Experience for Art</h3>
+
+  <!-- Project Description -->
+  <p class="mt-4 text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed text-center">
+    A beautiful website application designed for a renowned artist, featuring a gallery, exhibitions, a contact form, and a language switcher. Built using React.js, Tailwind CSS, and Next.js, this project focuses on mobile-first design and SEO optimization.
+  </p>
+
+  <!-- Key Features Section -->
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Feature 1: Gallery and Exhibitions -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Gallery and Exhibitions</h4>
+      <p class="text-gray-300 leading-relaxed">
+        A sleek, interactive gallery displaying the artist's works with details about past and upcoming exhibitions. Visitors can explore high-resolution images of the artwork in an engaging format.
+      </p>
+    </div>
+
+    <!-- Feature 2: Mobile-First Design -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Mobile-First Design</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Designed with mobile-first principles, ensuring seamless usability across devices from smartphones to large desktop screens.
+      </p>
+    </div>
+
+    <!-- Feature 3: Contact Form -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Contact Form</h4>
+      <p class="text-gray-300 leading-relaxed">
+        A simple yet effective contact form for visitors to connect with the artist, inquire about commissions, or arrange viewings.
+      </p>
+    </div>
+
+    <!-- Feature 4: Language Switcher -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Language Switcher</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Seamlessly switch between languages to accommodate a global audience. The language switcher is prominently placed for easy access.
+      </p>
+    </div>
+
+    <!-- Feature 5: SEO Optimization -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">SEO Optimization</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Built with SEO best practices in mind, ensuring the site ranks well on search engines and drives organic traffic to the artist’s portfolio.
+      </p>
+    </div>
+  </div>
+
+  <hr class="my-12 border-gray-600" />
+
+<!-- Visual Experience Section with Image -->
+<section class="relative mt-16" id="laptop-section">
+  <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-24 md:mb-64">Experience the Art Digitally</h2>
+  
+  <!-- Image with responsiveness -->
+  <div class="mt-8 relative mx-auto w-full max-w-5xl perspective-[1500px]">
+    <img 
+      src="/images/1-2.png" 
+      alt="MAA Art Website on Laptop" 
+      id="laptop-image"
+      class="rounded-lg w-full h-auto object-contain"
+      style="transform: rotateX(90deg); transform-origin: bottom; opacity: 0; transition: transform 1.2s ease, opacity 0.8s ease;"
+    />
+  </div>
+</section>
+
+<style>
+  /* General laptop image style */
+  #laptop-image {
+    max-width: 100vw;
+  }
+
+  /* Larger image for mobile devices, full width */
+  @media (max-width: 768px) {
+    #laptop-image {
+      transform: rotateX(90deg) scale(1.4); /* Full width for mobile */
+      max-width: 120vw; /* Allow image to go slightly beyond the screen */
+    }
+  }
+
+  /* Larger image for desktop */
+  @media (min-width: 768px) {
+    #laptop-image {
+      transform: rotateX(90deg) scale(1.1); /* Bigger scale for desktop */
+    }
+  }
+</style>
+
+<script>
+  // Function to handle the animation on scroll
+  function handleScrollAnimation() {
+    const laptopImage = document.getElementById('laptop-image');
+    const laptopSection = document.getElementById('laptop-section');
+    
+    // Get the position of the section
+    const sectionPos = laptopSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.5;
+
+    // Trigger the animation when the section comes into view
+    if (sectionPos < screenPos) {
+      laptopImage.style.opacity = '1';
+      laptopImage.style.transform = 'rotateX(0deg) scale(1.4)'; // Adjusted for mobile and desktop
+    } else {
+      laptopImage.style.opacity = '0';
+      laptopImage.style.transform = 'rotateX(90deg) scale(1.4)';
+    }
+  }
+
+  // Event listener for scroll to trigger animation
+  window.addEventListener('scroll', handleScrollAnimation);
+</script>
+
+  <!-- Buttons Section -->
+  <div class="mt-16 mb-36 flex flex-col md:flex-row gap-6 justify-center">
+    
+    <!-- GitHub Button -->
+    <a href="https://github.com/jurilorenz/maa-art-react" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
+      Check Project on GitHub
+    </a>
+
+    <!-- Back to Projects Button -->
+    <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all">
+      Go Back to Projects
+    </a>
+  </div>
+</section>
