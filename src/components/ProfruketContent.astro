@@ -1,45 +1,87 @@
 ---
-// This is the ProFruket content component
+  // This is the ProFruket content component
 ---
 
-<section class="mt-8">
-  <h2 class="text-3xl font-bold">Online School ProFruket</h2>
-  <p class="mt-8 text-gray-200">
-    As the CEO of "Online School ProFruket," I played a pivotal role in growing this startup, focused on teaching people how to create edible bouquets while maintaining an eco-friendly approach.
+<section class="mt-12">
+  <h2 class="text-4xl font-bold text-white tracking-wider text-center">Online School ProFruket</h2>
+  <h3 class="text-2xl mt-6 text-gray-300 tracking-wide text-center">Empowering Creativity with Sustainability</h3>
+
+  <!-- Project Description -->
+  <p class="mt-4 text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed text-center">
+    As the CEO of "Online School ProFruket," I spearheaded the growth of a startup focused on teaching people how to create stunning edible bouquets, all while prioritizing sustainability and eco-friendly practices.
   </p>
 
-  <!-- Key Features Section -->
-  <div class="mt-8">
-    <h3 class="text-2xl font-bold text-gray-100">Key Achievements</h3>
-    <ul class="list-disc list-inside text-gray-200 mt-2 space-y-2">
-      <li>Led the strategic growth and recognition of the startup, with a focus on sustainability and eco-friendliness.</li>
-      <li>Successfully executed marketing campaigns, reaching a wider audience.</li>
-      <li>Launched a user-friendly website that highlighted our expertise and sustainable values.</li>
-      <li>Implemented SEO strategies, leading to top Google search rankings and significantly increased traffic.</li>
-      <li>Took charge of CRM, building strong relationships with customers.</li>
-      <li>Sold over 1,000 online courses, becoming a recognized leader in the edible bouquet industry.</li>
-      <li>Stepped down in 2019 due to relocation to Germany, but proud of the growth and achievements during my tenure.</li>
-    </ul>
+  <!-- Key Achievements Section -->
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Achievement 1 -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Strategic Growth & Sustainability</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Led the strategic growth and recognition of the startup, placing sustainability and eco-friendly practices at the core of our mission.
+      </p>
+    </div>
+
+    <!-- Achievement 2 -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Successful Marketing Campaigns</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Executed effective marketing campaigns that expanded our audience and drove business growth.
+      </p>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">User-Friendly Website Launch</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Launched an intuitive website, showcasing our expertise and emphasizing sustainable practices to engage visitors.
+      </p>
+    </div>
+
+    <!-- Achievement 4 -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">SEO Success</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Implemented SEO strategies that achieved top Google search rankings and significantly increased organic traffic.
+      </p>
+    </div>
+
+    <!-- Achievement 5 -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Customer Retention & CRM</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Developed a CRM system, improving customer retention and building long-term relationships with clients.
+      </p>
+    </div>
+
+    <!-- Achievement 6 -->
+    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
+      <h4 class="text-2xl font-semibold text-white mb-4">Expansion & New Markets</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Expanded into new markets, increasing sales and reaching new customer demographics.
+      </p>
+    </div>
   </div>
+
+  <hr class="my-12 border-gray-600" />
 
   <!-- Video Section -->
-  <div class="mt-8">
-    <h3 class="text-2xl font-bold">Watch Our Journey</h3>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/c7N4tiAawVI" frameborder="0" allowfullscreen class="mt-4"></iframe>
-  </div>
-
-  <hr class="my-8 border-gray-700" />
+  <section class="relative mt-16" id="video-section">
+    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12 md:mb-12">Watch Our Journey</h2>
+    <div class="mt-8 relative mx-auto w-full max-w-5xl">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/c7N4tiAawVI" frameborder="0" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+    </div>
+  </section>
 
   <!-- Buttons Section -->
-  <div class="mt-12 mb-36 flex flex-col md:flex-row gap-6 justify-center">
-  
-<!-- Contact Page Button -->
-<a href="/contact" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
-  Contact Me
-</a>
+  <div class="mt-16 mb-36 flex flex-col md:flex-row gap-6 justify-center">
+    
+    <!-- Contact Button -->
+    <a href="/contact" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
+      Contact Me
+    </a>
 
     <!-- Back to Projects Button -->
-    <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all">
+    <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all">
       Go Back to Projects
     </a>
   </div>
