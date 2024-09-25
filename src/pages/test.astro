@@ -1,0 +1,85 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout 
+  title="Juri Lorenz's Introduction" 
+  seoTitle="Introduction - Juri Lorenz" 
+  seoDesc="Introduction to Juri Lorenz, App Developer with expertise in mobile-first web development and app creation."
+>
+  <!-- Gradient Background -->
+  <div class="min-h-screen pt-32 bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex flex-col items-center justify-center">
+    
+    <!-- Title with subtle animation -->
+    <h1 class="pb-4 text-6xl text-center md:text-5xl font-bold drop-shadow-lg mt-2 md:mt-16 animate-fade-in">
+      Hi, I’m Juri Lorenz
+    </h1>
+
+    <!-- Subtitle with animated underline -->
+    <h3 class="text-2xl font-bold mt-4 text-gray-300 animate-fade-in">
+      App and Web Developer from Munich, Germany
+    </h3>
+
+    <!-- Content Section with emphasis on intro text -->
+    <div class="w-10/12 md:w-8/12 lg:w-6/12 mx-auto mt-8 text-gray-300 space-y-6 text-lg md:text-xl">
+      <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-transform duration-500 hover:scale-105 animate-fade-in">
+        <p>
+          I specialize in creating <strong>conversion-focused, mobile-first web applications</strong> that deliver fast, seamless experiences across all devices. My goal is to ensure that every website I build is optimized for user experience, from <span class="text-gradient">smartphones</span> to desktops.
+        </p>
+      </div>
+      
+      <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-transform duration-500 hover:scale-105 animate-fade-in">
+        <p>
+          With over <strong>5 years of professional experience</strong>, I’ve developed a strong foundation in <span class="text-gradient">Android and iOS development, WordPress, Astro, React, and Next.js</span>. My experience in mobile app development ensures that every website I build is truly mobile-first, offering an optimal user experience across all platforms.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA Button Section -->
+    <div class="mt-12 flex flex-col gap-4 w-full items-center justify-center">
+      <a href="/projects" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-200 transition-all w-10/12 max-w-xs text-center animate-fade-in">
+        Explore My Work
+      </a>
+      <a href="/contact" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-lg border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all w-10/12 max-w-xs text-center animate-fade-in">
+        Contact Me
+      </a>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #9c27b0, #03a9f4);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .bg-gradient-to-b {
+    background: linear-gradient(to bottom, #090a1a, #290065);
+  }
+
+  .drop-shadow-lg {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+  }
+
+  .rounded-lg {
+    border-radius: 8px;
+  }
+</style>
