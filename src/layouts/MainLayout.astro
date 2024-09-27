@@ -3,21 +3,35 @@ import Mainhead from "./Mainhead.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 
-const { title, seoDesc, seoTitle } = Astro.props;
+const { title, seoTitle, seoDesc } = Astro.props;
 ---
 
-
-<html>
-  <Mainhead title={title} seoTitle= {seoTitle} seoDesc= {seoDesc} />
+<html lang="en">
+  <Mainhead title={title} seoTitle={seoTitle} seoDesc={seoDesc} />
   <body class="bg-slate-900 text-white grid gap-0">
+    <!-- Navigation Component -->
     <Nav />
-    <slot />
+
+    <!-- Main Content with padding to offset navbar height -->
+    <main class="pt-16"> <!-- Add padding-top to main content -->
+      <slot />
+    </main>
+
+    <!-- Footer Component -->
     <Footer />
+    
     <style>
-       body {
+      body {
         font-family: "Inter", sans-serif;
+        background: linear-gradient(to bottom, #090a1a, #290065);
         min-height: 100vh;
-       }
+        display: flex;
+        flex-direction: column;
+      }
+      
+      main {
+        flex-grow: 1;
+      }
     </style>
   </body>
 </html>

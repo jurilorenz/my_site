@@ -1,0 +1,76 @@
+---
+// DevicesComponent.astro
+---
+
+<div class="relative w-full flex items-center justify-center py-32 md:py-64 overflow-hidden">
+  <!-- iPad Image -->
+  <img src="/images/hero-ipad.png" 
+       class="ipad-image absolute w-[80%] md:w-[50%] transform rotate-x-45 opacity-0 z-0"
+       alt="iPad Image" />
+
+  <!-- iPhone Image -->
+  <img src="/images/hero-iphone.png" 
+       class="iphone-image absolute transform translate-y-full opacity-0 right-[35%] md:right-[18%] w-[35%] md:w-[15%] z-10"
+       alt="iPhone Image" />
+</div>
+
+<style>
+/* Animation for iPad opening like a laptop */
+@keyframes openLikeLaptop {
+  0% {
+    transform: rotateX(90deg) translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0) translateY(-15%);
+    opacity: 1;
+  }
+}
+
+/* Animation for iPhone flying up */
+@keyframes flyUpFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-25%);
+    opacity: 1;
+  }
+}
+
+/* iPad Animation */
+.ipad-image {
+  animation: openLikeLaptop 1.8s ease-out forwards;
+}
+
+/* iPhone Animation */
+.iphone-image {
+  animation: flyUpFromBottom 2.5s ease-out forwards;
+  animation-delay: 1s; /* Delayed appearance for the iPhone */
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+  .ipad-image {
+    width: 80%; /* For mobile, adjust the iPad image size */
+    transform: translateY(-15%);
+  }
+  .iphone-image {
+    width: 35%; /* Resize iPhone for mobile */
+    transform: translateY(-25%);
+  }
+}
+
+@media (min-width: 769px) {
+  .ipad-image {
+    width: 50%; /* Larger size for iPad on desktop */
+    transform: translateY(-15%); /* Adjust the position */
+  }
+  .iphone-image {
+    width: 15%; /* Adjust iPhone size for desktop */
+    right: 18%; /* Position the iPhone slightly over the iPad */
+    transform: translateY(-25%); /* Adjust the position */
+  }
+}
+</style>
