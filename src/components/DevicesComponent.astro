@@ -2,10 +2,10 @@
 // DevicesComponent.astro
 ---
 
-<div class="relative w-full flex items-center  shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
+<div class="relative w-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
   <!-- iPad Image -->
   <img src="/images/hero-ipad.png" 
-       class="ipad-image absolute w-[80%] md:w-[50%] bottom-0 transform rotate-x-45 opacity-0 z-0"
+       class="ipad-image absolute w-[80%] md:w-[50%] bottom-0 object-contain"
        alt="iPad Image" />
 
   <!-- iPhone Image 1 -->
@@ -15,7 +15,56 @@
 </div>
 
 <style>
-/* Animation for iPad opening like a laptop */
+/* iPad Animation and Proportions */
+.ipad-image {
+  animation: openLikeLaptop 1.8s ease-out forwards;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  transform: rotateX(0deg);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Keeps the aspect ratio of the iPad image */
+}
+
+/* iPhone Right Animation */
+.iphone-image-right {
+  animation: flyInFromRight 2.5s ease-out forwards;
+  animation-delay: 1.2s;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+  .ipad-image {
+    width: 95%;
+    max-height: 80vh; /* Ensure it doesn’t exceed viewport height */
+    bottom: 20%;
+  }
+
+  .iphone-image-right {
+    width: 35%;
+    right: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .ipad-image {
+    width: 50%;
+    max-height: 80vh; /* Ensure it doesn’t exceed viewport height */
+    bottom: 0;
+  }
+
+  .iphone-image-right {
+    width: 15%;
+    z-index: 10;
+  }
+}
+
+/* Keyframes for animations */
 @keyframes openLikeLaptop {
   0% {
     transform: rotateX(90deg);
@@ -27,7 +76,6 @@
   }
 }
 
-/* Animation for iPhone flying from the right */
 @keyframes flyInFromRight {
   0% {
     transform: translateX(100%);
@@ -38,100 +86,35 @@
     opacity: 1;
   }
 }
-
-/* Animation for iPhone flying from the left */
-@keyframes flyInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* iPad Animation */
-.ipad-image {
-  animation: openLikeLaptop 1.8s ease-out forwards;
-  position: absolute;
-  bottom: 0; /* Ensure it's aligned to the bottom */
-  z-index: 0; /* Default z-index */
-  transform: rotateX(0deg); /* Change this as needed */
-}
-
-/* iPhone Right Animation */
-.iphone-image-right {
-  animation: flyInFromRight 2.5s ease-out forwards;
-  animation-delay: 1.2s;
-  position: absolute;
-  bottom: 0;
-  z-index: 10; /* Higher z-index for iPhone by default */
-}
-
-/* Add media queries for responsive design */
-@media (max-width: 768px) {
-  .ipad-image {
-    width: 95%;
-    bottom: 25%;
-    right: 10px; /* Add margin from the edge of the screen */
-    z-index: 0;
-  }
-
-  .iphone-image-right {
-    width: 35%;
-    right: 10px; /* Add margin from the edge of the screen */
-    z-index: 10;
-  }
-}
-
-@media (min-width: 769px) {
-  .ipad-image {
-    width: 50%;
-    bottom: 0; /* Keep iPad at the bottom for larger screens */
-    z-index: 0; /* Reset to default for larger screens */
-  }
-  .iphone-image-right {
-    width: 15%;
-    z-index: 10; /* Default z-index for larger screens */
-  }
-}
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Select elements and cast them as HTMLElement
-  const ipad = document.querySelector('.ipad-image') as HTMLElement;
-  const iphoneRight = document.querySelector('.iphone-image-right') as HTMLElement;
-  
-  // Function to check if an element is in the viewport
-  function isInViewport(el: HTMLElement) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom >= 0
-    );
-  }
-  
-  // Function to handle the scroll event and start animations when in view
-  function checkScroll() {
-    if (ipad && iphoneRight && isInViewport(ipad)) {
-      ipad.style.animationPlayState = 'running';
-      iphoneRight.style.animationPlayState = 'running';
+  document.addEventListener('DOMContentLoaded', function() {
+    const ipad = document.querySelector('.ipad-image') as HTMLImageElement;
+    const iphoneRight = document.querySelector('.iphone-image-right') as HTMLImageElement;
+    
+    function isInViewport(el: HTMLElement): boolean {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
     }
-  }
-
-  // Initially stop the animation until the element is in view
-  if (ipad && iphoneRight) {
-    ipad.style.animationPlayState = 'paused';
-    iphoneRight.style.animationPlayState = 'paused';
-  }
-
-  // Attach scroll event listener
-  window.addEventListener('scroll', checkScroll);
-
-  // Run the check on load in case the element is already in view
-  checkScroll();
-});
-
-</script>
+  
+    function checkScroll() {
+      if (ipad && iphoneRight && isInViewport(ipad)) {
+        ipad.style.animationPlayState = 'running';
+        iphoneRight.style.animationPlayState = 'running';
+      }
+    }
+  
+    // Initially pause the animations
+    if (ipad && iphoneRight) {
+      ipad.style.animationPlayState = 'paused';
+      iphoneRight.style.animationPlayState = 'paused';
+    }
+  
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Check if the element is in view on page load
+  });
+  </script>
