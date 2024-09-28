@@ -2,15 +2,15 @@
 // DevicesComponent.astro
 ---
 
-<div class="relative w-full flex items-center justify-center py-32 md:py-64 overflow-hidden">
+<div class="relative w-full flex items-center  shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
   <!-- iPad Image -->
   <img src="/images/hero-ipad.png" 
-       class="ipad-image absolute w-[80%] md:w-[50%] transform rotate-x-45 opacity-0 z-0"
+       class="ipad-image absolute w-[80%] md:w-[50%] bottom-0 transform rotate-x-45 opacity-0 z-0"
        alt="iPad Image" />
 
-  <!-- iPhone Image -->
+  <!-- iPhone Image 1 -->
   <img src="/images/hero-iphone.png" 
-       class="iphone-image absolute transform translate-y-full opacity-0 right-[35%] md:right-[18%] w-[35%] md:w-[15%] z-10"
+       class="iphone-image-right absolute bottom-0 transform translate-x-full opacity-0 right-[35%] md:right-[18%] w-[35%] md:w-[15%] z-10"
        alt="iPhone Image" />
 </div>
 
@@ -18,23 +18,35 @@
 /* Animation for iPad opening like a laptop */
 @keyframes openLikeLaptop {
   0% {
-    transform: rotateX(90deg) translateY(100%);
+    transform: rotateX(90deg);
     opacity: 0;
   }
   100% {
-    transform: rotateX(0) translateY(-15%);
+    transform: rotateX(0);
     opacity: 1;
   }
 }
 
-/* Animation for iPhone flying up */
-@keyframes flyUpFromBottom {
+/* Animation for iPhone flying from the right */
+@keyframes flyInFromRight {
   0% {
-    transform: translateY(100%);
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
-    transform: translateY(-25%);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for iPhone flying from the left */
+@keyframes flyInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -42,35 +54,84 @@
 /* iPad Animation */
 .ipad-image {
   animation: openLikeLaptop 1.8s ease-out forwards;
+  position: absolute;
+  bottom: 0; /* Ensure it's aligned to the bottom */
+  z-index: 0; /* Default z-index */
+  transform: rotateX(0deg); /* Change this as needed */
 }
 
-/* iPhone Animation */
-.iphone-image {
-  animation: flyUpFromBottom 2.5s ease-out forwards;
-  animation-delay: 1s; /* Delayed appearance for the iPhone */
+/* iPhone Right Animation */
+.iphone-image-right {
+  animation: flyInFromRight 2.5s ease-out forwards;
+  animation-delay: 1.2s;
+  position: absolute;
+  bottom: 0;
+  z-index: 10; /* Higher z-index for iPhone by default */
 }
 
 /* Add media queries for responsive design */
 @media (max-width: 768px) {
   .ipad-image {
-    width: 80%; /* For mobile, adjust the iPad image size */
-    transform: translateY(-15%);
+    width: 95%;
+    bottom: 25%;
+    right: 10px; /* Add margin from the edge of the screen */
+    z-index: 0;
   }
-  .iphone-image {
-    width: 35%; /* Resize iPhone for mobile */
-    transform: translateY(-25%);
+
+  .iphone-image-right {
+    width: 35%;
+    right: 10px; /* Add margin from the edge of the screen */
+    z-index: 10;
   }
 }
 
 @media (min-width: 769px) {
   .ipad-image {
-    width: 50%; /* Larger size for iPad on desktop */
-    transform: translateY(-15%); /* Adjust the position */
+    width: 50%;
+    bottom: 0; /* Keep iPad at the bottom for larger screens */
+    z-index: 0; /* Reset to default for larger screens */
   }
-  .iphone-image {
-    width: 15%; /* Adjust iPhone size for desktop */
-    right: 18%; /* Position the iPhone slightly over the iPad */
-    transform: translateY(-25%); /* Adjust the position */
+  .iphone-image-right {
+    width: 15%;
+    z-index: 10; /* Default z-index for larger screens */
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Select elements and cast them as HTMLElement
+  const ipad = document.querySelector('.ipad-image') as HTMLElement;
+  const iphoneRight = document.querySelector('.iphone-image-right') as HTMLElement;
+  
+  // Function to check if an element is in the viewport
+  function isInViewport(el: HTMLElement) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+  
+  // Function to handle the scroll event and start animations when in view
+  function checkScroll() {
+    if (ipad && iphoneRight && isInViewport(ipad)) {
+      ipad.style.animationPlayState = 'running';
+      iphoneRight.style.animationPlayState = 'running';
+    }
+  }
+
+  // Initially stop the animation until the element is in view
+  if (ipad && iphoneRight) {
+    ipad.style.animationPlayState = 'paused';
+    iphoneRight.style.animationPlayState = 'paused';
+  }
+
+  // Attach scroll event listener
+  window.addEventListener('scroll', checkScroll);
+
+  // Run the check on load in case the element is already in view
+  checkScroll();
+});
+
+</script>
