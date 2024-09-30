@@ -2,7 +2,8 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<header class="fixed top-0 left-0 w-full bg-gradient-to-r from-[#090a1a] to-[#290065] text-white py-4 px-6 shadow-md z-50">  <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
+<header class="fixed top-0 left-0 w-full bg-gradient-to-r from-[#090a1a] to-[#290065] text-white py-4 px-6 shadow-md z-50">  
+  <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
     <!-- Logo and Site Name (left aligned) -->
     <div class="flex items-center space-x-4">
       <!-- Clickable Logo and Site Name -->
@@ -29,8 +30,49 @@ import { Icon } from 'astro-icon/components';
     <li><a href="/" class="text-gray-300 hover:text-white transition">Home</a></li>
     <li><a href="/projects" class="text-gray-300 hover:text-white transition">Projects</a></li>
     <li><a href="/about" class="text-gray-300 hover:text-white transition">About</a></li>
+
+<!-- Language Switcher -->
+<details class="group relative lg:flex">
+  <summary class="flex items-center cursor-pointer text-lg font-medium text-gray-300 hover:text-white transition-all gap-2">
+    Language
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-3 inline-block rotate-0 group-open:rotate-180 transition-transform duration-500 align-middle" style="vertical-align: -2px;" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+      <path d="M1 1L11 11L21 1" stroke="currentColor" stroke-width="5"/>
+    </svg>
+  </summary>
+
+  <!-- Dropdown content with Flag Icons -->
+  <ul class="flex flex-col absolute left-0 top-full translate-y-2 min-w-[8rem] p-2 shadow-lg border border-gray-700 rounded-lg invisible opacity-0 group-open:visible group-open:opacity-100 group-open:translate-y-0 transition-all duration-500"
+  style="background: rgba(42, 42, 79, 0.3); backdrop-filter: blur(8px);">    
+    <li class="hover:bg-gray-700 transition-all duration-200">
+      <a href="/de" class="flex items-center py-2 px-2 text-white text-sm space-x-3 transition">
+        <!-- German Flag Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" stroke="CurrentColor" stroke-width="2.5" fill="none">
+          <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" />
+          <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" />
+          <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" />
+        </svg>
+        <span>German</span>
+      </a>
+    </li>
+    
+    <li class="hover:bg-gray-700 transition-all duration-200">
+      <a href="/en" class="flex items-center py-2 px-2 text-white text-sm space-x-3 transition">
+        <!-- UK Flag Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" stroke="CurrentColor" stroke-width="2.5" fill="none">
+          <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" />
+          <line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" />
+          <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" />
+          <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" />
+        </svg>
+        <span>English</span>
+      </a>
+    </li>
+  </ul>
+</details>
   </ul>
 </nav>
+
+
 
     <!-- Social Icons (right aligned for large screens) -->
     <div class="hidden lg:flex items-center space-x-6">
@@ -44,8 +86,9 @@ import { Icon } from 'astro-icon/components';
   </div>
 
   <!-- Mobile Menu Section -->
-  <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-[#090a1a] text-white z-50 opacity-0 invisible transition-opacity duration-300 ease-in-out">
-    <div class="flex flex-col h-full justify-start py-2">
+  <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full text-white z-50 opacity-0 invisible transition-opacity duration-300 ease-in-out"
+  style="background: rgba(42, 42, 79, 0.29); backdrop-filter: blur(8px);">    
+  <div class="flex flex-col h-full justify-start py-2">
       
       <!-- Top Section with Logo and Close Icon -->
       <div class="flex justify-between items-center mb-2 px-6">
@@ -67,6 +110,42 @@ import { Icon } from 'astro-icon/components';
           <li class="w-full border-t border-b border-gray-600"><a href="/" class="block py-6 px-6 hover:text-gray-400 transition">Home</a></li>
           <li class="w-full border-b border-gray-600"><a href="/projects" class="block py-6 px-6 hover:text-gray-400 transition">Projects</a></li>
           <li class="w-full border-b border-gray-600"><a href="/about" class="block py-6 px-6 hover:text-gray-400 transition">About</a></li>
+          <!-- Language Switcher for Mobile -->
+          <details class="group relative">
+            <summary class="flex justify-between items-center py-6 px-6 text-lg font-light cursor-pointer border-b border-gray-600">
+              Language
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block rotate-0 group-open:rotate-180 transition-transform duration-500 align-middle" style="vertical-align: -2px;" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                <path d="M1 1L11 11L21 1" stroke="currentColor" stroke-width="5"/>
+              </svg>
+            </summary>
+          
+            <!-- Dropdown content for Mobile -->
+            <ul class="flex flex-col pl-6 pr-12 pt-3 pb-3 bg-[#090a1a] border border-gray-700 rounded-lg shadow-lg overflow-hidden transition-all duration-500 max-h-0 group-open:max-h-64">
+              <li class="hover:bg-gray-700 transition-all duration-200">
+                <a href="/de" class="flex items-center py-2 px-6 text-white space-x-3 transition">
+                  <!-- German Flag Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" stroke="CurrentColor" stroke-width="2.5" fill="none">
+                    <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" />
+                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" />
+                    <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" />
+                  </svg>
+                  <span>German</span>
+                </a>
+              </li>
+              <li class="hover:bg-gray-700 transition-all duration-200">
+                <a href="/en" class="flex items-center py-3 px-6 text-white space-x-3 transition">
+                  <!-- UK Flag Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" stroke="CurrentColor" stroke-width="2.5" fill="none">
+                    <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" />
+                    <line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" />
+                    <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" />
+                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" />
+                  </svg>
+                  <span>English</span>
+                </a>
+              </li>
+            </ul>
+          </details>
         </ul>
       </nav>
 
