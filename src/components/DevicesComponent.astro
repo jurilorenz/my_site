@@ -5,7 +5,7 @@
 <div class="relative w-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
   <!-- iPad Image -->
   <img src="/images/hero-ipad.png" 
-       class="ipad-image absolute w-[80%] md:w-[50%] bottom-0 object-contain"
+       class="ipad-image absolute bottom-0 object-contain max-h-full"
        alt="iPad Image" />
 
   <!-- iPhone Image 1 -->
@@ -20,12 +20,10 @@
   animation: openLikeLaptop 1.8s ease-out forwards;
   position: absolute;
   bottom: 0;
-  z-index: 0;
-  transform: rotateX(0deg);
+  max-height: 100%; /* Ensures the iPad height stays within the parent container */
   width: auto;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain; /* Keeps the aspect ratio of the iPad image */
+  object-fit: contain; /* Ensures the aspect ratio is maintained */
+  transform: rotateX(0deg);
 }
 
 /* iPhone Right Animation */
@@ -35,33 +33,6 @@
   position: absolute;
   bottom: 0;
   z-index: 10;
-}
-
-/* Media Queries for responsive design */
-@media (max-width: 768px) {
-  .ipad-image {
-    width: 95%;
-    max-height: 80vh; /* Ensure it doesn’t exceed viewport height */
-    bottom: 20%;
-  }
-
-  .iphone-image-right {
-    width: 35%;
-    right: 10px;
-  }
-}
-
-@media (min-width: 769px) {
-  .ipad-image {
-    width: 50%;
-    max-height: 80vh; /* Ensure it doesn’t exceed viewport height */
-    bottom: 0;
-  }
-
-  .iphone-image-right {
-    width: 15%;
-    z-index: 10;
-  }
 }
 
 /* Keyframes for animations */
@@ -86,35 +57,54 @@
     opacity: 1;
   }
 }
+
+/* Limit the height for the component itself */
+@media (min-width: 769px) {
+  .relative {
+    max-height: 80vh; /* Limit the overall height of the component */
+  }
+}
+
+@media (max-width: 768px) {
+  .ipad-image {
+    width: 90%;
+    bottom: 10%;
+  }
+
+  .iphone-image-right {
+    width: 30%;
+    right: 10px;
+  }
+}
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const ipad = document.querySelector('.ipad-image') as HTMLImageElement;
-    const iphoneRight = document.querySelector('.iphone-image-right') as HTMLImageElement;
-    
-    function isInViewport(el: HTMLElement): boolean {
-      const rect = el.getBoundingClientRect();
-      return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0
-      );
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  const ipad = document.querySelector('.ipad-image') as HTMLImageElement;
+  const iphoneRight = document.querySelector('.iphone-image-right') as HTMLImageElement;
   
-    function checkScroll() {
-      if (ipad && iphoneRight && isInViewport(ipad)) {
-        ipad.style.animationPlayState = 'running';
-        iphoneRight.style.animationPlayState = 'running';
-      }
+  function isInViewport(el: HTMLElement): boolean {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  function checkScroll() {
+    if (ipad && iphoneRight && isInViewport(ipad)) {
+      ipad.style.animationPlayState = 'running';
+      iphoneRight.style.animationPlayState = 'running';
     }
-  
-    // Initially pause the animations
-    if (ipad && iphoneRight) {
-      ipad.style.animationPlayState = 'paused';
-      iphoneRight.style.animationPlayState = 'paused';
-    }
-  
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Check if the element is in view on page load
-  });
-  </script>
+  }
+
+  // Initially pause the animations
+  if (ipad && iphoneRight) {
+    ipad.style.animationPlayState = 'paused';
+    iphoneRight.style.animationPlayState = 'paused';
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll(); // Check if the element is in view on page load
+});
+</script>

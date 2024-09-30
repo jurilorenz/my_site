@@ -3,34 +3,32 @@
 ---
 
 <div class="min-h-screen text-white py-20 md:py-40">
-  
-    <div class="text-center md:text-left w-11/12 md:w-10/12 lg:w-8/12 mx-auto mt-6 md:mt-0"> <!-- Adjusted margins -->
+  <div class="text-center md:text-left w-11/12 md:w-10/12 lg:w-full max-w-7xl mx-auto mt-6 md:mt-0"> <!-- Adjusted to max-w-7xl -->
+    <!-- Content Section -->
+    <div class="min-h-screen text-white py-20 md:py-10">
+      <div class="flex flex-col lg:flex-row justify-between w-11/12 md:w-10/12 lg:w-full mx-auto items-center md:items-start gap-16 md:gap-2">
+      
+        <!-- Left Section: Services, Main Motto, and Project Request Button -->
+        <div class="lg:w-1/2 flex-shrink-0">
+          <!-- Services -->
+          <p class="text-lg md:text-2xl font-medium text-gray-300">
+            <span>Services</span><br />
+          </p>
 
-<!-- Content Section -->
-<div class="min-h-screen text-white py-20 md:py-10">
-  <div class="flex flex-col lg:flex-row justify-between w-11/12 md:w-10/12 lg:w-full lg:ml-0 mx-auto items-center md:items-start gap-16 md:gap-2">
-    
-    <!-- Left Section: Services, Main Motto, and Project Request Button -->
-    <div class="lg:w-1/2 flex-shrink-0">
-      <!-- Services -->
-      <p class="text-lg md:text-2xl font-medium text-gray-300">
-        <span>Services</span><br />
-      </p>
+          <!-- Main Motto -->
+          <p class="my-4 mb-16 text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500" style="line-height: 1.2;">
+            <span>Crafting Exceptional</span><br />
+            <span>Digital Solutions</span>
+          </p>
 
-      <!-- Main Motto -->
-      <p class="my-4 mb-16 text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500" style="line-height: 1.2;">
-        <span>Crafting Exceptional</span><br />
-        <span>Digital Solutions</span>
-      </p>
-
-      <!-- Project Request Button -->
-      <a href="/contact" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-glow">
-        Project Request
-      </a>
-    </div>
+          <!-- Project Request Button -->
+          <a href="/contact" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-glow">
+            Project Request
+          </a>
+        </div>
 
     <!-- Right Section: Services Accordion List -->
-    <div class="accordion max-w-3xl w-full my-8 lg:mt-0 lg:w-2/3 px-6 md:px-0 lg:ml-auto lg:mr-8">
+    <div class="accordion max-w-3xl w-full my-8 lg:mt-0 lg:w-1/2 px-6 md:px-0 lg:ml-auto lg:mr-8">
       
 <!-- Category 1: Design -->
 <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] mb-8 category">
@@ -177,8 +175,8 @@
 .category {
   cursor: pointer;
   border-radius: 8px;
-  margin-left: auto; /* Align the categories to the right */
-  max-width: 500px; /* Shortened width */
+  margin-left: 0; /* Align the categories to the right */
+  max-width: full; /* Shortened width */
 }
 
 .services.hidden {
