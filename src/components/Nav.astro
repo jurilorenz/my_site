@@ -42,7 +42,7 @@ import { Icon } from 'astro-icon/components';
 
   <!-- Dropdown content with Flag Icons -->
   <ul class="flex flex-col absolute left-0 top-full translate-y-2 min-w-[8rem] p-2 shadow-lg border border-gray-700 rounded-lg invisible opacity-0 group-open:visible group-open:opacity-100 group-open:translate-y-0 transition-all duration-500"
-  style="background: rgba(42, 42, 79, 0.3); backdrop-filter: blur(8px);">    
+  style="background: rgba(42, 42, 79, 0.25); backdrop-filter: blur(8px);">    
     <li class="hover:bg-gray-700 transition-all duration-200">
       <a href="/de" class="flex items-center py-2 px-2 text-white text-sm space-x-3 transition">
         <!-- German Flag Icon -->
@@ -90,19 +90,20 @@ import { Icon } from 'astro-icon/components';
   style="background: rgba(42, 42, 79, 0.25); backdrop-filter: blur(8px);">    
   <div class="flex flex-col h-full justify-start py-2">
       
-      <!-- Top Section with Logo and Close Icon -->
-      <div class="flex justify-between items-center mb-2 px-6">
-        <div class="flex items-center space-x-4">
-          <img src="/images/logo.svg" alt="Logo" class="w-10 h-10 logo-stable" />
-          <span class="text-2xl font-montserrat tracking-wider font-bold">maxWapp</span>
-        </div>
-        <button id="close-menu" class="block lg:hidden focus:outline-none py-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
-            <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" stroke-linejoin="round"></line>
-            <line x1="6" y1="18" x2="18" y2="6" stroke-linecap="round" stroke-linejoin="round"></line>
-          </svg>
-        </button>
-      </div>
+<!-- Top Section with Logo and Close Icon -->
+<div class="flex justify-between items-center mb-2 px-6">
+  <!-- Make the Logo and Company Name clickable -->
+  <a href="/" class="flex items-center space-x-4">
+    <img src="/images/logo.svg" alt="Logo" class="w-10 h-10 logo-stable" />
+    <span class="text-2xl font-montserrat tracking-wider font-bold">maxWapp</span>
+  </a>
+  <button id="close-menu" class="block lg:hidden focus:outline-none py-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
+      <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" stroke-linejoin="round"></line>
+      <line x1="6" y1="18" x2="18" y2="6" stroke-linecap="round" stroke-linejoin="round"></line>
+    </svg>
+  </button>
+</div>
 
       <!-- Mobile Menu Items -->
       <nav>
@@ -178,24 +179,26 @@ import { Icon } from 'astro-icon/components';
   let menuOpen = false;
 
   openMenu.addEventListener('click', () => {
-    if (!menuOpen) {
-      mobileMenu.classList.remove('invisible');
-      mobileMenu.classList.add('opacity-100');
-      mobileMenu.classList.remove('opacity-0');
-    }
-    menuOpen = true;
-  });
+  if (!menuOpen) {
+    mobileMenu.classList.remove('invisible');
+    mobileMenu.classList.add('opacity-100');
+    mobileMenu.classList.remove('opacity-0');
+    document.body.style.overflow = 'hidden'; // Block scrolling
+  }
+  menuOpen = true;
+});
 
-  closeMenu.addEventListener('click', () => {
-    if (menuOpen) {
-      mobileMenu.classList.add('opacity-0');
-      mobileMenu.classList.remove('opacity-100');
-      setTimeout(() => {
-        mobileMenu.classList.add('invisible');
-      }, 300);
-    }
-    menuOpen = false;
-  });
+closeMenu.addEventListener('click', () => {
+  if (menuOpen) {
+    mobileMenu.classList.add('opacity-0');
+    mobileMenu.classList.remove('opacity-100');
+    setTimeout(() => {
+      mobileMenu.classList.add('invisible');
+      document.body.style.overflow = ''; // Allow scrolling
+    }, 300);
+  }
+  menuOpen = false;
+});
 </script>
 
 <style>
