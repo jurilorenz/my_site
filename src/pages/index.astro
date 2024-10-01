@@ -3,12 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import DevicesComponent from '../components/DevicesComponent.astro';
 import ServicesComponent from '../components/ServicesComponent.astro';
 import HeroComponent from "../components/HeroComponent.astro";
+import jsonData from '../locales/en.json';
 ---
 
 <MainLayout 
   title="Juri Lorenz Portfolio Site" 
-  seoTitle="Juri Lorenz, App Developer Portfolio" 
-  seoDesc="Innovative App Developer Specializing in Astro, React and Mobile Solutions"
+  seoTitle={jsonData.index.seoTitle} 
+  seoDesc={jsonData.index.seoDesc}
+>
   >
     <!-- Devices Section -->
     <HeroComponent />
