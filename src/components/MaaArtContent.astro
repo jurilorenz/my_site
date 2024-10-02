@@ -2,133 +2,121 @@
   // This is the MAA Art website project component
 ---
 
-<section class="mt-12">
-  <h2 class="text-4xl font-bold text-white tracking-wider text-center">MAA Art Website</h2>
-  <h3 class="text-2xl mt-6 text-gray-300 tracking-wide text-center">Crafting a Digital Experience for Art</h3>
+<section class="min-h-screen text-white py-20 md:py-4">
+  <div class="text-center w-11/12 md:w-10/12 lg:w-8/12 mx-auto">
+    
+    <!-- Title with Gradient -->
+    <h2 class="my-4 mb-16 text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500" style="line-height: 1.2;">
+      Meisterhaftes Web-Portfolio für berühmte Künstlerin    
+    </h2>
 
-  <!-- Project Description -->
-  <p class="mt-4 text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed text-center">
-    A beautiful website application designed for a renowned artist, featuring a gallery, exhibitions, a contact form, and a language switcher. Built using React.js, Tailwind CSS, and Next.js, this project focuses on mobile-first design and SEO optimization.
-  </p>
+    <!-- Project Description -->
+    <h2 class="text-2xl mt-4 text-gray-400 leading-relaxed text-center max-w-3xl mx-auto">
+      Eine wunderschöne Website, die für einen renommierten Künstler gestaltet wurde. Sie umfasst eine Galerie, Ausstellungen, ein Kontaktformular und einen Sprachwechsler. Gebaut mit React.js, Tailwind CSS und Next.js, liegt der Fokus dieses Projekts auf mobile-first Design und SEO-Optimierung.
+    </h2>
+  </div>
 
   <!-- Key Features Section -->
-  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+    
     <!-- Feature 1: Gallery and Exhibitions -->
-    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-      <h4 class="text-2xl font-semibold text-white mb-4">Gallery and Exhibitions</h4>
-      <p class="text-gray-300 leading-relaxed">
-        A sleek, interactive gallery displaying the artist's works with details about past and upcoming exhibitions. Visitors can explore high-resolution images of the artwork in an engaging format.
+    <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+      <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+      <h3 class="text-2xl font-semibold text-white mb-4">Galerie und Ausstellungen</h3>
+      <p class="text-xl text-gray-300 leading-relaxed">
+        Eine elegante, interaktive Galerie, die die Werke des Künstlers präsentiert, zusammen mit Informationen zu vergangenen und kommenden Ausstellungen. Besucher können hochauflösende Bilder der Kunstwerke in einem fesselnden Format erkunden.
       </p>
     </div>
 
     <!-- Feature 2: Mobile-First Design -->
-    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-      <h4 class="text-2xl font-semibold text-white mb-4">Mobile-First Design</h4>
-      <p class="text-gray-300 leading-relaxed">
-        Designed with mobile-first principles, ensuring seamless usability across devices from smartphones to large desktop screens.
+    <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+      <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+      <h3 class="text-2xl font-semibold text-white mb-4">Mobile-First Design</h3>
+      <p class="text-xl text-gray-300 leading-relaxed">
+        Entwickelt mit einem mobilen-first Ansatz, der eine nahtlose Benutzerfreundlichkeit über alle Geräte hinweg gewährleistet, von Smartphones bis hin zu großen Desktop-Bildschirmen.
       </p>
     </div>
 
     <!-- Feature 3: Contact Form -->
-    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-      <h4 class="text-2xl font-semibold text-white mb-4">Contact Form</h4>
-      <p class="text-gray-300 leading-relaxed">
-        A simple yet effective contact form for visitors to connect with the artist, inquire about commissions, or arrange viewings.
+    <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+      <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+      <h3 class="text-2xl font-semibold text-white mb-4">Kontaktformular</h3>
+      <p class="text-xl text-gray-300 leading-relaxed">
+        Ein einfaches, aber effektives Kontaktformular, mit dem Besucher den Künstler erreichen, Aufträge anfragen oder Besichtigungen vereinbaren können.
       </p>
     </div>
 
     <!-- Feature 4: Language Switcher -->
-    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-      <h4 class="text-2xl font-semibold text-white mb-4">Language Switcher</h4>
-      <p class="text-gray-300 leading-relaxed">
-        Seamlessly switch between languages to accommodate a global audience. The language switcher is prominently placed for easy access.
+    <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+      <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+      <h3 class="text-2xl font-semibold text-white mb-4">Sprachwechsler</h3>
+      <p class="text-xl text-gray-300 leading-relaxed">
+        Mühelos zwischen verschiedenen Sprachen wechseln, um ein globales Publikum anzusprechen. Der Sprachwechsler ist gut sichtbar und leicht zugänglich platziert.
       </p>
     </div>
 
     <!-- Feature 5: SEO Optimization -->
-    <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-      <h4 class="text-2xl font-semibold text-white mb-4">SEO Optimization</h4>
-      <p class="text-gray-300 leading-relaxed">
-        Built with SEO best practices in mind, ensuring the site ranks well on search engines and drives organic traffic to the artist’s portfolio.
+    <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+      <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+      <h3 class="text-2xl font-semibold text-white mb-4">SEO-Optimierung</h3>
+      <p class="text-xl text-gray-300 leading-relaxed">
+        Entwickelt unter Berücksichtigung von SEO-Best-Practices, um eine gute Platzierung in Suchmaschinen zu gewährleisten und organischen Traffic auf das Portfolio des Künstlers zu lenken.
       </p>
     </div>
   </div>
 
   <hr class="my-12 border-gray-600" />
 
-<!-- Visual Experience Section with Image -->
-<section class="relative mt-16" id="laptop-section">
-  <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-24 md:mb-64">Experience the Art Digitally</h2>
-  
-  <!-- Image with responsiveness -->
-  <div class="mt-8 relative mx-auto w-full max-w-5xl perspective-[1500px]">
-    <img 
-      src="/images/1-2.png" 
-      alt="MAA Art Website on Laptop" 
-      id="laptop-image"
-      class="rounded-lg w-full h-auto object-contain"
-      style="transform: rotateX(90deg); transform-origin: bottom; opacity: 0; transition: transform 1.2s ease, opacity 0.8s ease;"
-    />
-  </div>
-</section>
+  <!-- Visual Experience Section with Image -->
+  <section class="relative mt-16" id="laptop-section">
+    <h2 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center leading-relaxed mb-32 md:mb-72">Erleben Sie Kunst digital</h2>    
+    <!-- Image with responsiveness -->
+    <div class="mt-8 relative mx-auto w-full max-w-5xl perspective-[1500px]">
+      <img 
+        src="/images/1-2.png" 
+        alt="MAA Art Website on Laptop" 
+        id="laptop-image"
+        class="rounded-lg w-full h-auto object-contain"
+        style="transform: rotateX(90deg); transform-origin: bottom; opacity: 0; transition: transform 1.2s ease, opacity 0.8s ease;"
+      />
+    </div>
+  </section>
 
-<style>
-  /* General laptop image style */
-  #laptop-image {
-    max-width: 100vw;
-  }
+  <script>
+    // Function to handle the animation on scroll
+    function handleScrollAnimation() {
+      const laptopImage = document.getElementById('laptop-image');
+      const laptopSection = document.getElementById('laptop-section');
+      
+      // Get the position of the section
+      const sectionPos = laptopSection.getBoundingClientRect().top;
+      const screenPos = window.innerHeight / 1.5;
 
-  /* Larger image for mobile devices, full width */
-  @media (max-width: 768px) {
-    #laptop-image {
-      transform: rotateX(90deg) scale(1.4); /* Full width for mobile */
-      max-width: 120vw; /* Allow image to go slightly beyond the screen */
+      // Trigger the animation when the section comes into view
+      if (sectionPos < screenPos) {
+        laptopImage.style.opacity = '1';
+        laptopImage.style.transform = 'rotateX(0deg) scale(1.4)';
+      } else {
+        laptopImage.style.opacity = '0';
+        laptopImage.style.transform = 'rotateX(90deg) scale(1.4)';
+      }
     }
-  }
 
-  /* Larger image for desktop */
-  @media (min-width: 768px) {
-    #laptop-image {
-      transform: rotateX(90deg) scale(1.1); /* Bigger scale for desktop */
-    }
-  }
-</style>
-
-<script>
-  // Function to handle the animation on scroll
-  function handleScrollAnimation() {
-    const laptopImage = document.getElementById('laptop-image');
-    const laptopSection = document.getElementById('laptop-section');
-    
-    // Get the position of the section
-    const sectionPos = laptopSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.5;
-
-    // Trigger the animation when the section comes into view
-    if (sectionPos < screenPos) {
-      laptopImage.style.opacity = '1';
-      laptopImage.style.transform = 'rotateX(0deg) scale(1.4)'; // Adjusted for mobile and desktop
-    } else {
-      laptopImage.style.opacity = '0';
-      laptopImage.style.transform = 'rotateX(90deg) scale(1.4)';
-    }
-  }
-
-  // Event listener for scroll to trigger animation
-  window.addEventListener('scroll', handleScrollAnimation);
-</script>
+    // Event listener for scroll to trigger animation
+    window.addEventListener('scroll', handleScrollAnimation);
+  </script>
 
   <!-- Buttons Section -->
-  <div class="mt-16 mb-36 flex flex-col md:flex-row gap-6 justify-center">
+  <div class="mt-24 mb-36 flex flex-col md:flex-row gap-6 justify-center">
     
     <!-- GitHub Button -->
-    <a href="https://github.com/jurilorenz/maa-art-react" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
-      Check Project on GitHub
+    <a href="https://github.com/jurilorenz/maa-art-react" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg hover:shadow-glow transition-all duration-300 ease-in-out">
+      Projekt auf GitHub ansehen
     </a>
 
     <!-- Back to Projects Button -->
-    <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all">
-      Go Back to Projects
+    <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all text-center w-full max-w-xs md:max-w-none md:w-auto">
+      Zurück zu den Projekten
     </a>
   </div>
 </section>

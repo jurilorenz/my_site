@@ -11,28 +11,28 @@ export async function getStaticPaths() {
       params: { projects: "1" }, 
       props: {
         name: "MAA Art",
-        desc: "A beautiful, dynamic gallery powered by React.js. Showcasing responsive design and modern UI techniques.",
+        desc: "",
       },
     },
     { 
       params: { projects: "2" }, 
       props: {
         name: "ROOM Planetarium",
-        desc: "A captivating journey through the cosmos with immersive features like AR exploration and stellar sound design.",
+        desc: "",
       },
     },
     { 
       params: { projects: "3" }, 
       props: {
         name: "Battle Calculator",
-        desc: "Turn math into a thrilling gaming experience with explosive sound and visual effects.",
+        desc: "",
       },
     },
     { 
       params: { projects: "4" }, 
       props: {
         name: "ProFruket",
-        desc: "Crafting Beauty, Nurturing Nature",
+        desc: "",
       },
     },
   ];
@@ -44,10 +44,10 @@ const { name, desc } = Astro.props;
 
 <MainLayout>
   <!-- Background with gradient similar to home page -->
-  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white">
+  <div class="min-h-screen text-white">
 
     <!-- Title -->
-    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg my-8">
+    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-24 mb-8">
       Project {name}
     </h1>
 

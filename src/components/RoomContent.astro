@@ -1,80 +1,85 @@
----
-// This is the ROOM Planetarium content component
----
+<section class="min-h-screen text-white py-20 md:py-4">
+  <div class="text-center w-11/12 md:w-10/12 lg:w-8/12 mx-auto">
+    
+    <!-- Title with Gradient -->
+    <h2 class="my-4 mb-16 text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500" style="line-height: 1.2;">
+      Deine Reise ins Weltall
+    </h2>
 
-  <!-- This is the ROOM Planetarium content component -->
-
-  <section class="mt-12">
-    <h2 class="text-4xl font-bold text-white tracking-wider text-center">ROOM Planetarium</h2>
-    <h3 class="text-2xl mt-6 text-gray-300 tracking-wide text-center">Your Space Odyssey</h3>
-  
     <!-- Project Description -->
-    <p class="mt-4 text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed text-center">
-      Introducing ROOM Planetarium, an immersive and educational app that invites users on a captivating journey through the cosmos. Crafted to blend cutting-edge technology with an engaging user experience, ROOM Planetarium offers a virtual odyssey into the universe's mysteries.
-    </p>
-  
+    <h2 class="text-2xl mt-4 text-gray-400 leading-relaxed text-center max-w-3xl mx-auto">
+      Entdecke das ROOM Planetarium, eine immersive und lehrreiche App, die Nutzer auf eine fesselnde Reise durch das Universum mitnimmt. ROOM Planetarium vereint modernste Technologie mit einem aufregenden Nutzererlebnis und bietet eine virtuelle Odyssee zu den Geheimnissen des Kosmos.
+    </h2>
+  </div>
     <!-- Key Features Section -->
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+      
       <!-- Feature 1: Augmented Reality Exploration -->
-      <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-        <h4 class="text-2xl font-semibold text-white mb-4">Augmented Reality Exploration</h4>
-        <p class="text-gray-300 leading-relaxed">
-          Unveil the mysteries of our solar system with the power of Augmented Reality (AR). Immerse yourself in a stunning virtual universe where you can interactively explore celestial bodies and even manipulate their rotations.
+      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+        <h3 class="text-2xl font-semibold text-white mb-4">Augmented Reality Entdeckungen</h3>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Lüfte die Geheimnisse unseres Sonnensystems mit der Kraft der Augmented Reality (AR). Tauche ein in ein atemberaubendes virtuelles Universum, wo du interaktiv Himmelskörper erkunden und sogar ihre Rotationen steuern kannst.
         </p>
       </div>
-  
+
       <!-- Feature 2: Intuitive UI/UX Design -->
-      <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-        <h4 class="text-2xl font-semibold text-white mb-4">Intuitive UI/UX Design</h4>
-        <p class="text-gray-300 leading-relaxed">
-          Seamless navigation and engaging interaction are at the heart of ROOM Planetarium's user interface, offering a smooth exploration of the cosmos.
+      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+        <h3 class="text-2xl font-semibold text-white mb-4">Intuitives UI/UX Design</h3>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Nahtlose Navigation und spannende Interaktionen stehen im Mittelpunkt des ROOM Planetarium Interfaces, das eine reibungslose Erforschung des Kosmos ermöglicht.
         </p>
       </div>
-  
+
       <!-- Feature 3: Unique Interface Design -->
-      <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-        <h4 class="text-2xl font-semibold text-white mb-4">Unique Interface Design</h4>
-        <p class="text-gray-300 leading-relaxed">
-          Thoughtfully crafted interactions and visuals provide a breathtaking experience, showcasing the beauty of the cosmos.
+      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+        <h3 class="text-2xl font-semibold text-white mb-4">Einzigartiges Interface-Design</h3>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Durchdachte Interaktionen und visuelle Darstellungen bieten ein atemberaubendes Erlebnis und zeigen die Schönheit des Kosmos in voller Pracht.
         </p>
       </div>
-  
+
       <!-- Feature 4: Captivating Animations -->
-      <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-        <h4 class="text-2xl font-semibold text-white mb-4">Captivating Animations</h4>
-        <p class="text-gray-300 leading-relaxed">
-          Mesmerizing animations elevate the user experience, making ROOM Planetarium a dynamic and immersive space journey.
+      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+        <h3 class="text-2xl font-semibold text-white mb-4">Fesselnde Animationen</h3>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Mitreißende Animationen heben das Nutzererlebnis auf ein neues Level und machen ROOM Planetarium zu einer dynamischen und immersiven Weltraumreise.
         </p>
       </div>
-  
+
       <!-- Feature 5: Stellar Sound Design -->
-      <div class="bg-[#1b1b33] p-6 rounded-lg border border-gray-700 shadow-lg hover:shadow-xl transition-all">
-        <h4 class="text-2xl font-semibold text-white mb-4">Stellar Sound Design</h4>
-        <p class="text-gray-300 leading-relaxed">
-          The curated sound design complements the app's visual elements, offering an immersive auditory experience.
+      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
+        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+        <h3 class="text-2xl font-semibold text-white mb-4">Galaktisches Sounddesign</h3>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Das kuratierte Sounddesign ergänzt die visuellen Elemente der App und bietet ein immersives Klangerlebnis.
         </p>
       </div>
     </div>
-  
+
     <hr class="my-12 border-gray-600" />
-  
+
     <!-- Visual Experience Section with Video -->
     <section class="relative mt-16">
-      <h2 class="text-3xl font-bold text-white text-center">Feel the Sound and Visual Effects</h2>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/u_h3aZ_qvfI" frameborder="0" allowfullscreen class="mt-8 rounded-lg shadow-lg"></iframe>
+      <h2 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center">Erlebe die visuellen und akustischen Effekte</h2>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/u_h3aZ_qvfI" frameborder="0" loading="lazy" allowfullscreen class="mt-8 rounded-lg shadow-lg"></iframe>
     </section>
-  
+
     <!-- Buttons Section -->
-    <div class="mt-16 mb-36 flex flex-col md:flex-row gap-6 justify-center">
+    <div class="mt-24 mb-36 flex flex-col md:flex-row gap-6 justify-center">
       
       <!-- GitHub Button -->
-      <a href="https://github.com/jurilorenz/Room-Planetarium" class="bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all">
-        Check Project on GitHub
+      <a href="https://github.com/jurilorenz/Room-Planetarium" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg hover:shadow-glow transition-all duration-300 ease-in-out">
+        Projekt auf GitHub ansehen
       </a>
-  
+
       <!-- Back to Projects Button -->
-      <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all">
-        Go Back to Projects
+      <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all text-center w-full max-w-xs md:max-w-none md:w-auto">
+        Zurück zu den Projekten
       </a>
     </div>
-  </section>
+
+</section>

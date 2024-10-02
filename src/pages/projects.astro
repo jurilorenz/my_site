@@ -9,55 +9,60 @@ import MainLayout from "../layouts/MainLayout.astro";
 >
 
   <!-- Gradient Background -->
-  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white pt-16">
-
-    <!-- Title -->
-    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-8 mb-16">
-      My Projects
+  <div class="min-h-screen text-white py-20 md:py-24">
+    
+    <!-- Title with Gradient -->
+    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mb-16">
+      Meine Projekte
     </h1>
+
 
     <!-- Section 1: Web Development -->
     <section class="mb-12">
-      <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-6">Crafting the Web</h2>
-      <div class="grid md:grid-cols-2 gap-4 w-10/12 mx-auto">
+      <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-12">Web</h2>
+      <div class="grid md:grid-cols-2 gap-12 w-10/12 mx-auto">
         <!-- Project 1 -->
-        <a href="/projects/1" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
-          <img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/1.png" alt="Astro Gallery"/>
-          <h3 class="font-bold my-4 text-xl ">Elegant Artist Portfolio</h3>
-          <p class="text-gray-400">A sleek web application for a famous artist, featuring a dynamic gallery, exhibition updates, and mobile-first design. Built with React.js, Tailwind CSS, and Next.js.</p>
+        <a href="/projects/1" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
+          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/1.png" alt="Astro Gallery"/>
+          <h3 class="font-bold my-4 text-xl text-white">Meisterhaftes Web-Portfolio für berühmte Künstlerin   </h3>
+          <p class="text-gray-300 leading-relaxed">Eine wunderschöne Website, die für einen renommierten Künstler gestaltet wurde. Sie umfasst eine Galerie, Ausstellungen, ein Kontaktformular und einen Sprachwechsler. Gebaut mit React.js, Tailwind CSS und Next.js, liegt der Fokus dieses Projekts auf mobile-first Design und SEO-Optimierung.</p>
         </a>
       </div>
     </section>
 
     <!-- Section 2: iOS Development -->
     <section class="mb-12">
-      <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-6">The iOS Experience</h2>
-      <div class="grid md:grid-cols-2 gap-4 w-10/12 mx-auto">
-        <!-- Project 2 (Moved to iOS) -->
-        <a href="/projects/2" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
-          <img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/2.png" alt="React Portfolio"/>
-          <h3 class="font-bold my-4 text-xl">ROOM Planetarium</h3>
-          <p class="text-gray-400">A Stellar Experience on iOS with Augmented Reality.</p>
+      <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-12 mt-24">Mobil</h2>
+      <div class="grid md:grid-cols-2 gap-12 w-10/12 mx-auto">
+        <!-- Project 2 -->
+        <a href="/projects/2" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
+          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/2.png" alt="React Portfolio"/>
+          <h3 class="font-bold my-4 text-xl text-white">ROOM Planetarium</h3>
+          <p class="text-gray-300 leading-relaxed">Entdecke das ROOM Planetarium, eine immersive und lehrreiche App, die Nutzer auf eine fesselnde Reise durch das Universum mitnimmt. ROOM Planetarium vereint modernste Technologie mit einem aufregenden Nutzererlebnis und bietet eine virtuelle Odyssee zu den Geheimnissen des Kosmos.</p>
         </a>
 
         <!-- Project 3 -->
-        <a href="/projects/3" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
-<img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/3.png" alt="Mobile App"/>          
-<h3 class="font-bold my-4 text-xl">Mobile iOS Native App</h3>
-          <p class="text-gray-400">Exciting Action-Packed Calculator for iOS.</p>
+        <a href="/projects/3" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
+          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/3.png" alt="Mobile App"/>
+          <h3 class="font-bold my-4 text-xl text-white">Battle Calculator</h3>
+          <p class="text-gray-300 leading-relaxed">Bist du es leid, langweilige Alltagsrechner zu nutzen, die jegliche Spannung vermissen lassen? Hier kommt der Battle Calculator – die App, die den Nervenkitzel eines actiongeladenen Spiels in die Welt der Mathematik bringt.</p>
         </a>
       </div>
     </section>
 
     <!-- Section 3: My Startup -->
     <section class="mb-12">
-      <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-6">Startup Founder</h2>
-      <div class="grid md:grid-cols-2 gap-4 w-10/12 mx-auto">
+      <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-12 mt-24">Startup-Gründer</h2>
+      <div class="grid md:grid-cols-2 gap-12 w-10/12 mx-auto">
         <!-- Project 4 -->
-        <a href="/projects/4" class="bg-[#0b0e19] p-6 rounded-lg shadow-md border border-gray-700 transition hover:shadow-lg flex flex-col items-center">
-          <img class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/4.png" alt="Firebase Integration"/>
-          <h3 class="font-bold my-4 text-xl">Online School ProFruket</h3>
-          <p class="text-gray-400">As the driving force behind the online school "ProFruket" I took charge of marketing, site launching, implementing SEO strategies and CRM. All this has propelled us to the top of search rankings and enabled us to sale over 1000 online courses.</p>
+        <a href="/projects/4" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
+          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/4.png" alt="Firebase Integration"/>
+          <h3 class="font-bold my-4 text-xl text-white">Kreativität und Nachhaltigkeit vereint</h3>
+          <p class="text-gray-300 leading-relaxed">Als CEO der "Online-Schule ProFruket" habe ich das Wachstum eines Startups geleitet, das Menschen beibringt, beeindruckende essbare Sträuße zu kreieren – mit einem klaren Fokus auf Nachhaltigkeit und umweltfreundliche Praktiken.</p>
         </a>
       </div>
     </section>
@@ -68,5 +73,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 <style>
   body {
     font-family: 'Inter', sans-serif;
+  }
+  
+  /* Glowing effect on hover */
+  .hover\:shadow-glow:hover {
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.8), 0 0 35px rgba(3, 169, 244, 0.6);
+    transition: box-shadow 0.3s ease;
   }
 </style>
