@@ -17,7 +17,7 @@
   </div>
 
   <!-- Key Features Section -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-24">
     
     <!-- Feature 1: Gallery and Exhibitions -->
     <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105">
@@ -69,7 +69,7 @@
 
   <!-- Visual Experience Section with Image -->
   <section class="relative mt-16" id="laptop-section">
-    <h2 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center leading-relaxed mb-32 md:mb-72">Erleben Sie Kunst digital</h2>    
+    <h2 class="md:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center leading-relaxed mb-32 md:mb-72">Erleben Sie Kunst digital</h2>    
     <!-- Image with responsiveness -->
     <div class="mt-8 relative mx-auto w-full max-w-5xl perspective-[1500px]">
       <img 
@@ -82,41 +82,42 @@
     </div>
   </section>
 
-  <script>
-    // Function to handle the animation on scroll
-    function handleScrollAnimation() {
-      const laptopImage = document.getElementById('laptop-image');
-      const laptopSection = document.getElementById('laptop-section');
-      
-      // Get the position of the section
-      const sectionPos = laptopSection.getBoundingClientRect().top;
-      const screenPos = window.innerHeight / 1.5;
 
-      // Trigger the animation when the section comes into view
-      if (sectionPos < screenPos) {
-        laptopImage.style.opacity = '1';
-        laptopImage.style.transform = 'rotateX(0deg) scale(1.4)';
-      } else {
-        laptopImage.style.opacity = '0';
-        laptopImage.style.transform = 'rotateX(90deg) scale(1.4)';
-      }
-    }
-
-    // Event listener for scroll to trigger animation
-    window.addEventListener('scroll', handleScrollAnimation);
-  </script>
 
   <!-- Buttons Section -->
-  <div class="mt-24 mb-36 flex flex-col md:flex-row gap-6 justify-center">
-    
-    <!-- GitHub Button -->
-    <a href="https://github.com/jurilorenz/maa-art-react" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg hover:shadow-glow transition-all duration-300 ease-in-out">
-      Projekt auf GitHub ansehen
-    </a>
-
-    <!-- Back to Projects Button -->
-    <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] transition-all text-center w-full max-w-xs md:max-w-none md:w-auto">
-      Zurück zu den Projekten
-    </a>
-  </div>
+          <div class="flex flex-col md:flex-row gap-6 mt-12 md:my-16 justify-center md:justify-center items-center md:items-start w-full md:w-auto">
+            <!-- Primary Button -->
+            <a href="https://github.com/jurilorenz/maa-art-react"  class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]">
+              Projekt auf GitHub ansehen
+            </a>
+          
+            <!-- Secondary Button -->
+            <a href="/projects"  class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto">
+              Zurück zu den Projekten
+            </a>
+          </div>
 </section>
+
+<script>
+  // Function to handle the animation on scroll
+  function handleScrollAnimation() {
+    const laptopImage = document.getElementById('laptop-image');
+    const laptopSection = document.getElementById('laptop-section');
+    
+    // Get the position of the section
+    const sectionPos = laptopSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.5;
+
+    // Trigger the animation when the section comes into view
+    if (sectionPos < screenPos) {
+      laptopImage.style.opacity = '1';
+      laptopImage.style.transform = 'rotateX(0deg) scale(1.4)';
+    } else {
+      laptopImage.style.opacity = '0';
+      laptopImage.style.transform = 'rotateX(90deg) scale(1.4)';
+    }
+  }
+
+  // Event listener for scroll to trigger animation
+  window.addEventListener('scroll', handleScrollAnimation);
+</script>

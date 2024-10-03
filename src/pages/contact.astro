@@ -3,106 +3,114 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout 
-  title="Contact Juri Lorenz" 
-  seoTitle="Contact Juri Lorenz, App Developer"
-  seoDesc="Get in touch with Juri Lorenz for collaborations, inquiries, or project ideas."
+title="Kontakt | Weblösungen & App-Entwicklung mit Juri Lorenz | maxWapp"
+seoTitle={"Kontakt | Weblösungen & App-Entwicklung mit Juri Lorenz in München | maxWapp"}
+seoDesc={"Kontaktieren Sie Juri Lorenz, den erfahrenen Web- und App-Entwickler hinter maxWapp. Erfahren Sie mehr über seine maßgeschneiderten Weblösungen und App-Entwicklungsdienste in München, Deutschland, Österreich und der Schweiz."}
 >
-  <!-- Gradient Background -->
-  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex flex-col items-center justify-center">
+  <!-- Hintergrund mit Verlauf -->
+  <div class="min-h-screen text-white text-center flex flex-col items-center justify-center">
     
-    <!-- Title -->
-    <h1 class="pb-4 text-4xl md:text-5xl font-bold drop-shadow-lg mt-8 md:mt-4">
-      Let's Collaborate
+    <!-- Titel -->
+    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-24 mb-4 md:mt-24 md:mb-12">
+      Kontakt
     </h1>
 
-    <!-- Subtitle -->
-    <p class="text-lg md:text-2xl mt-4 text-gray-300 text-center">
-      Got a project in mind? Feel free to reach out!
-    </p>
+    <!-- Untertitel -->
+    <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg md:mb-8">
+      <div>Haben Sie ein Projekt im Sinn?</div>
+      <div>Lassen Sie uns darüber sprechen!</div>
+    </h2>
 
-    <!-- Form Section -->
-    <div class="w-10/12 md:w-8/12 lg:w-6/12 mx-auto mt-8">
-      <form class="space-y-6">
-        <!-- Name and Email Fields -->
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Your Name" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
-          <input type="email" placeholder="Your Email" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
-        </div>
+        <!-- Kontaktinformationen im Kartenstil -->
+        <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-8 mb-12">
+          <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
+            <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+            <form class="space-y-6">
+              <!-- Name und E-Mail Felder -->
 
-        <!-- Message Field -->
-        <textarea placeholder="Your Message" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32 focus:outline-none focus:ring-2 focus:ring-[#6d87d1]"></textarea>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <input type="text" placeholder="Name" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
+                  <input type="email" placeholder="E-Mail" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
+                </div>
 
-        <!-- Custom Checkbox and Label with Checkmark -->
-        <div class="flex items-start space-x-4">
-          <input type="checkbox" id="privacy-policy" class="custom-checkbox mt-1 w-5 h-5 appearance-none bg-transparent border-2 border-gray-300 rounded focus:ring-0 checked:bg-[#6d87d1] checked:border-[#6d87d1]">
-          <label for="privacy-policy" class="text-gray-300">I accept the <a href="/privacy" class="underline hover:text-[#6d87d1]">Privacy Policy</a></label>
-        </div>
+      
+              <!-- Nachrichtenfeld -->
 
-        <!-- Submit Button with the same style as 'Explore My Work' button -->
-        <div class="text-center mt-6">
-          <button type="submit" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg hover:bg-[#6d87d1] hover:text-white transition-all">
-            Send Message
-          </button>
-        </div>
-      </form>
-    </div>
+                <textarea placeholder="Nachricht" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32 focus:outline-none focus:ring-2 focus:ring-[#6d87d1]"></textarea>
 
-    <!-- Contact Information Section styled as a project card -->
-    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-12 mb-8">
-      <div class="bg-[#0b0e19] p-6 rounded-lg shadow-sm border border-gray-700 transition hover:shadow-md">
-        <h2 class="text-3xl font-bold text-center">Contact Information</h2>
-        <p class="mt-4 text-gray-300"><strong>Phone:</strong> +49 1 777 59 48 39 <br/> (Mon – Fri from 8:00 AM to 6:00 PM.)</p>
-        <p class="mt-4 text-gray-300"><strong>Email:</strong> <a href="mailto:yuriylorenz@gmail.com" class="underline hover:text-[#6d87d1]">yuriylorenz@gmail.com</a></p>
-        <p class="mt-4 text-gray-300"><strong>Office:</strong> <br/> Constanze-Hallgarten Str. 40, 81379 Munich</p>
+              <div class="mt-4 flex md:items-start gap-2">
+                <input type="checkbox" id="privacy-policy" class="custom-checkbox mt-1 w-5 h-5 appearance-none bg-transparent border-2 border-gray-300 rounded focus:ring-0 checked:bg-[#6d87d1] checked:border-[#6d87d1]">
+                <label for="privacy-policy" class="text-gray-300 text-left">Ich akzeptiere die <a href="/privacy" class="underline hover:text-[#6d87d1]">Datenschutzerklärung</a></label>
+              </div>
+      
+              <!-- Senden Button -->
+              <div class="text-center mt-6">
+                <button type="submit" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:text-white hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)]">
+                  Absenden
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+
+
+    <!-- Kontaktinformationen im Kartenstil -->
+    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-4 mb-12">
+      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
+        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+        <p class="mt-4 text-xl text-gray-300"><strong>Telefon:</strong> +49 1 777 59 48 39 <br/> (Mo – Fr von 8:00 bis 18:00 Uhr)</p>
+        <p class="mt-4 text-xl text-gray-300"><strong>E-Mail:</strong> <a href="mailto:yuriylorenz@gmail.com" class="underline hover:text-[#6d87d1]">yuriylorenz@gmail.com</a></p>
+        <p class="mt-4 text-xl text-gray-300"><strong>Adresse:</strong> <br/> Constanze-Hallgarten Str. 40, 81379 München</p>
         
         <div class="mt-4 flex justify-between">
-          <a href="/imprint" class="underline text-gray-400 hover:text-[#6d87d1]">Imprint</a>
-          <a href="/privacy" class="underline text-gray-400 hover:text-[#6d87d1]">Privacy Policy</a>
+          <a href="/imprint" class="underline text-gray-400 hover:text-[#6d87d1]">Impressum</a>
+          <a href="/privacy" class="underline text-gray-400 hover:text-[#6d87d1]">Datenschutz</a>
         </div>
       </div>
     </section>
+    
   </div>
 </MainLayout>
 
 <style>
-  body {
-    font-family: 'Inter', sans-serif;
-  }
 
-  .custom-checkbox {
-    width: 1.25rem;  /* Same width and height */
-    height: 1.25rem;
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-  }
+/* Custom checkbox styling */
+.custom-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  position: relative;
+}
 
-  .custom-checkbox:checked::before {
-    content: '✔';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.75rem;
-  }
+.custom-checkbox:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.75rem;
+}
 
-  /* Add a subtle shadow to the contact info section */
-  .shadow-sm {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Soft, small shadow */
-  }
+/* Card styling similar to the about page */
+.shadow-[0px_0px_35px_rgba(147,112,219,0.6)] {
+  box-shadow: 0px 0px 35px rgba(147, 112, 219, 0.6);
+}
 
-  .hover\:shadow-md:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly stronger on hover */
-  }
+.border-gray-700 {
+  border-color: rgba(110, 110, 110, 1);
+}
 
-  /* Add space before the title and between the contact card and footer on mobile */
-  @media (max-width: 768px) {
-    h1 {
-      margin-top: 2rem;
-    }
-    section.mb-12 {
-      margin-bottom: 4rem;
-    }
+/* Adding a gradient top line for the card */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, #9c27b0, #03a9f4);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  section.mb-12 {
+    margin-bottom: 4rem;
   }
+}
 </style>
