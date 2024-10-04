@@ -1,0 +1,1 @@
+import"./hoisted.DUOp2ALP.js";function n(){const t=document.getElementById("laptop-image"),e=document.getElementById("laptop-section").getBoundingClientRect().top,o=window.innerHeight/1.5;e<o?(t.style.opacity="1",t.style.transform="rotateX(0deg) scale(1.4)"):(t.style.opacity="0",t.style.transform="rotateX(90deg) scale(1.4)")}window.addEventListener("scroll",n);
